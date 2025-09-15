@@ -132,28 +132,40 @@ class UltraSafeCountryRedirects {
 
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
-            // Try to create table
+            // Try to create table with dbDelta first
             $wpdb->hide_errors();
             $result = dbDelta($sql);
             $wpdb->show_errors();
 
-            // Alternative method if dbDelta fails
+            // Check if table was created
             if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") != $this->table_name) {
-                $wpdb->query($sql);
+                // Try direct query if dbDelta failed
+                $direct_result = $wpdb->query($sql);
+
+                // Still no table? Try simple version
+                if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") != $this->table_name) {
+                    $simple_sql = "CREATE TABLE IF NOT EXISTS {$this->table_name} (
+                        id int(11) NOT NULL AUTO_INCREMENT,
+                        url text NOT NULL,
+                        country_code varchar(5) NOT NULL DEFAULT 'AZ',
+                        redirect_to text,
+                        is_active int(1) DEFAULT 1,
+                        created_at datetime DEFAULT CURRENT_TIMESTAMP,
+                        PRIMARY KEY (id)
+                    )";
+                    $wpdb->query($simple_sql);
+                }
+            }
+
+            // Final check and log
+            if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") == $this->table_name) {
+                error_log('Ultra Safe Redirects: Table created successfully');
+            } else {
+                error_log('Ultra Safe Redirects: Failed to create table. Last error: ' . $wpdb->last_error);
             }
 
         } catch (Exception $e) {
-            // Try simple CREATE TABLE as fallback
-            $simple_sql = "CREATE TABLE IF NOT EXISTS {$this->table_name} (
-                id int(11) NOT NULL AUTO_INCREMENT,
-                url text NOT NULL,
-                country_code varchar(5) NOT NULL DEFAULT 'AZ',
-                redirect_to text,
-                is_active int(1) DEFAULT 1,
-                created_at datetime DEFAULT CURRENT_TIMESTAMP,
-                PRIMARY KEY (id)
-            )";
-            $wpdb->query($simple_sql);
+            error_log('Ultra Safe Redirects: Exception creating table: ' . $e->getMessage());
         }
     }
 
@@ -210,6 +222,23 @@ class UltraSafeCountryRedirects {
 
             global $wpdb;
 
+            // Check if table exists first
+            if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") != $this->table_name) {
+                // Try to create the table
+                $this->create_table_ultra_safe();
+
+                // Check again
+                if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") != $this->table_name) {
+                    throw new Exception('Database table does not exist and could not be created');
+                }
+            }
+
+            // Test database connection
+            $test_query = $wpdb->get_var("SELECT COUNT(*) FROM {$this->table_name}");
+            if ($test_query === null && $wpdb->last_error) {
+                throw new Exception('Database connection error: ' . $wpdb->last_error);
+            }
+
             $result = $wpdb->insert(
                 $this->table_name,
                 array(
@@ -222,7 +251,8 @@ class UltraSafeCountryRedirects {
             );
 
             if ($result === false) {
-                throw new Exception('Database insert failed');
+                $error_msg = $wpdb->last_error ? $wpdb->last_error : 'Unknown database error';
+                throw new Exception('Database insert failed: ' . $error_msg);
             }
 
             add_action('admin_notices', function() {
@@ -590,6 +620,32 @@ class UltraSafeCountryRedirects {
                     <li><strong>Disable Quickly:</strong> If anything goes wrong, just uncheck "Enable"</li>
                     <li><strong>Example:</strong> Add <code><?php echo esc_url(home_url()); ?>/test</code> for Azerbaijan users</li>
                 </ol>
+            </div>
+
+            <!-- Debug Information -->
+            <div class="card" style="background: #fffbf0;">
+                <h2>🔧 Debug Information</h2>
+                <?php
+                global $wpdb;
+                $table_exists = $wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") == $this->table_name;
+                $db_connection = $wpdb->db_connect(false);
+                ?>
+                <ul style="list-style: none;">
+                    <li><?php echo $table_exists ? '✅' : '❌'; ?> <strong>Database Table:</strong> <?php echo $table_exists ? 'Exists' : 'Missing'; ?></li>
+                    <li><?php echo $db_connection ? '✅' : '❌'; ?> <strong>Database Connection:</strong> <?php echo $db_connection ? 'Connected' : 'Failed'; ?></li>
+                    <li>📊 <strong>Table Name:</strong> <code><?php echo esc_html($this->table_name); ?></code></li>
+                    <li>🌐 <strong>WordPress Version:</strong> <?php echo get_bloginfo('version'); ?></li>
+                    <li>🔢 <strong>PHP Version:</strong> <?php echo PHP_VERSION; ?></li>
+                    <li>🏠 <strong>Home URL:</strong> <code><?php echo esc_url(home_url()); ?></code></li>
+                </ul>
+
+                <?php if (!$table_exists): ?>
+                <p style="color: #d32f2f;"><strong>⚠️ Issue Detected:</strong> Database table is missing. This will cause "Error adding redirect". The plugin will attempt to create it when you add your first redirect.</p>
+                <?php endif; ?>
+
+                <?php if (!$db_connection): ?>
+                <p style="color: #d32f2f;"><strong>⚠️ Issue Detected:</strong> Database connection failed. This will prevent the plugin from working.</p>
+                <?php endif; ?>
             </div>
         </div>
         <?php
