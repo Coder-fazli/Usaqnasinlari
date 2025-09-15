@@ -208,6 +208,11 @@ class UltraSafeCountryRedirects {
         if (isset($_GET['delete_redirect']) && wp_verify_nonce($_GET['nonce'], 'delete_redirect')) {
             $this->delete_redirect_ultra_safe(intval($_GET['delete_redirect']));
         }
+
+        // Handle debug request
+        if (isset($_GET['debug_database']) && wp_verify_nonce($_GET['nonce'], 'debug_database')) {
+            $this->show_debug_info();
+        }
     }
 
     private function add_redirect_ultra_safe() {
@@ -514,6 +519,103 @@ class UltraSafeCountryRedirects {
         }
     }
 
+    private function show_debug_info() {
+        global $wpdb;
+
+        $debug_output = array();
+
+        // Test database connection
+        $debug_output[] = "=== DATABASE DEBUG INFORMATION ===";
+        $debug_output[] = "Time: " . date('Y-m-d H:i:s');
+
+        // Connection test
+        if ($wpdb->db_connect(false)) {
+            $debug_output[] = "✅ Database connection: SUCCESS";
+        } else {
+            $debug_output[] = "❌ Database connection: FAILED";
+            $debug_output[] = "Error: " . $wpdb->last_error;
+        }
+
+        // Table check
+        $table_exists = $wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") == $this->table_name;
+        $debug_output[] = "Table name: " . $this->table_name;
+
+        if ($table_exists) {
+            $debug_output[] = "✅ Table exists: YES";
+
+            // Table structure
+            $structure = $wpdb->get_results("DESCRIBE {$this->table_name}");
+            $debug_output[] = "Table structure:";
+            foreach ($structure as $column) {
+                $debug_output[] = "  - {$column->Field}: {$column->Type}";
+            }
+
+            // Record count
+            $count = $wpdb->get_var("SELECT COUNT(*) FROM {$this->table_name}");
+            $debug_output[] = "Record count: " . $count;
+
+            // Test insert
+            $debug_output[] = "\n=== INSERT TEST ===";
+            $wpdb->flush();
+
+            $test_result = $wpdb->insert(
+                $this->table_name,
+                array(
+                    'url' => 'http://debug-test.com/test',
+                    'country_code' => 'AZ',
+                    'redirect_to' => 'http://debug-test.com',
+                    'is_active' => 1
+                ),
+                array('%s', '%s', '%s', '%d')
+            );
+
+            if ($test_result !== false) {
+                $debug_output[] = "✅ Insert test: SUCCESS";
+                $debug_output[] = "Inserted ID: " . $wpdb->insert_id;
+
+                // Clean up
+                $wpdb->delete($this->table_name, array('url' => 'http://debug-test.com/test'), array('%s'));
+                $debug_output[] = "✅ Test data cleaned up";
+            } else {
+                $debug_output[] = "❌ Insert test: FAILED";
+                $debug_output[] = "MySQL Error: " . $wpdb->last_error;
+                $debug_output[] = "Last Query: " . $wpdb->last_query;
+            }
+
+        } else {
+            $debug_output[] = "❌ Table exists: NO";
+
+            // Try to create table
+            $debug_output[] = "\n=== TABLE CREATION TEST ===";
+            $this->create_table_ultra_safe();
+
+            $table_created = $wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") == $this->table_name;
+            if ($table_created) {
+                $debug_output[] = "✅ Table creation: SUCCESS";
+            } else {
+                $debug_output[] = "❌ Table creation: FAILED";
+                $debug_output[] = "Error: " . $wpdb->last_error;
+            }
+        }
+
+        // System info
+        $debug_output[] = "\n=== SYSTEM INFORMATION ===";
+        $debug_output[] = "WordPress version: " . get_bloginfo('version');
+        $debug_output[] = "PHP version: " . PHP_VERSION;
+        $debug_output[] = "MySQL version: " . $wpdb->get_var("SELECT VERSION()");
+        $debug_output[] = "Database name: " . DB_NAME;
+        $debug_output[] = "Table prefix: " . $wpdb->prefix;
+
+        if ($wpdb->last_error) {
+            $debug_output[] = "Last database error: " . $wpdb->last_error;
+        }
+
+        // Display debug output
+        add_action('admin_notices', function() use ($debug_output) {
+            echo '<div class="notice notice-info"><h3>Database Debug Results</h3><pre style="background: #f0f0f0; padding: 10px; overflow: auto; max-height: 400px;">' . esc_html(implode("\n", $debug_output)) . '</pre></div>';
+        });
+    }
+
     public function admin_page() {
         if (!$this->plugin_ready) {
             echo '<div class="wrap"><h1>Ultra Safe Country Redirects</h1><p>Plugin not ready - environment safety check failed.</p></div>';
@@ -717,6 +819,12 @@ class UltraSafeCountryRedirects {
 
                 <h4>Test Database Operations:</h4>
                 <p><em>Try adding a redirect to see detailed error information if something fails.</em></p>
+
+                <p>
+                    <a href="<?php echo wp_nonce_url(admin_url('options-general.php?page=ultra-safe-redirects&debug_database=1'), 'debug_database', 'nonce'); ?>"
+                       class="button button-secondary">🔧 Run Database Debug Test</a>
+                </p>
+                <p><small>This will run comprehensive database tests and show detailed error information.</small></p>
             </div>
         </div>
         <?php
