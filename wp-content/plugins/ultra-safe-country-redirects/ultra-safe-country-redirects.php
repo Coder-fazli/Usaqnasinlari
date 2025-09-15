@@ -213,6 +213,11 @@ class UltraSafeCountryRedirects {
         if (isset($_GET['debug_database']) && wp_verify_nonce($_GET['nonce'], 'debug_database')) {
             $this->show_debug_info();
         }
+
+        // Handle redirect test request
+        if (isset($_GET['test_redirect']) && wp_verify_nonce($_GET['nonce'], 'test_redirect')) {
+            $this->test_redirect_logic();
+        }
     }
 
     private function add_redirect_ultra_safe() {
@@ -616,6 +621,78 @@ class UltraSafeCountryRedirects {
         });
     }
 
+    private function test_redirect_logic() {
+        $test_output = array();
+
+        $test_output[] = "=== REDIRECT LOGIC TEST ===";
+        $test_output[] = "Time: " . date('Y-m-d H:i:s');
+
+        // Check if redirects are enabled
+        $enabled = get_option('uscr_enabled', false);
+        $test_output[] = "Plugin enabled: " . ($enabled ? "YES" : "NO");
+
+        if (!$enabled) {
+            $test_output[] = "❌ REDIRECTS ARE DISABLED - This is why redirects don't work!";
+        }
+
+        // Test safety checks
+        $test_output[] = "\n=== SAFETY CHECKS ===";
+        $test_output[] = "Environment safe: " . ($this->is_environment_safe() ? "YES" : "NO");
+        $test_output[] = "Redirect safe to run: " . ($this->is_redirect_safe_to_run() ? "YES" : "NO");
+
+        // Test current page detection
+        $test_output[] = "\n=== CURRENT PAGE DETECTION ===";
+        $current_url = $this->get_ultra_safe_url();
+        $test_output[] = "Current URL detected: " . ($current_url ?: "FAILED");
+
+        // Test country detection
+        $test_output[] = "\n=== COUNTRY DETECTION ===";
+        $user_country = $this->get_user_country_ultra_safe();
+        $test_output[] = "User country detected: " . $user_country;
+
+        // Test IP detection
+        $test_output[] = "User IP (for testing): " . (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'Not detected');
+
+        // Check database redirects
+        $test_output[] = "\n=== DATABASE REDIRECTS ===";
+        global $wpdb;
+        $redirects = $wpdb->get_results("SELECT * FROM {$this->table_name} WHERE is_active = 1");
+        $test_output[] = "Active redirects in database: " . count($redirects);
+
+        foreach ($redirects as $redirect) {
+            $test_output[] = "  - {$redirect->url} → {$redirect->redirect_to} (Country: {$redirect->country_code})";
+        }
+
+        // Test hooks
+        $test_output[] = "\n=== WORDPRESS HOOKS ===";
+        $test_output[] = "wp hook priority: " . (has_action('wp', array($this, 'ultra_safe_redirect_check')) !== false ? "ATTACHED" : "NOT ATTACHED");
+
+        // Show what would happen for Azerbaijan user
+        if (count($redirects) > 0 && $current_url) {
+            $test_output[] = "\n=== SIMULATION FOR AZERBAIJAN USER ===";
+            foreach ($redirects as $redirect) {
+                $redirect_url = trim($redirect->url);
+                $current_path = parse_url($current_url, PHP_URL_PATH);
+                $redirect_path = parse_url($redirect_url, PHP_URL_PATH);
+
+                $would_redirect = (
+                    $current_url === $redirect_url ||
+                    ($current_path && $redirect_path && $current_path === $redirect_path) ||
+                    ($redirect_path && substr($current_url, -strlen($redirect_path)) === $redirect_path)
+                );
+
+                $test_output[] = "URL: {$redirect_url}";
+                $test_output[] = "  Current URL: {$current_url}";
+                $test_output[] = "  Would redirect: " . ($would_redirect ? "YES" : "NO");
+            }
+        }
+
+        // Display test output
+        add_action('admin_notices', function() use ($test_output) {
+            echo '<div class="notice notice-info"><h3>Redirect Logic Test Results</h3><pre style="background: #f0f0f0; padding: 10px; overflow: auto; max-height: 400px;">' . esc_html(implode("\n", $test_output)) . '</pre></div>';
+        });
+    }
+
     public function admin_page() {
         if (!$this->plugin_ready) {
             echo '<div class="wrap"><h1>Ultra Safe Country Redirects</h1><p>Plugin not ready - environment safety check failed.</p></div>';
@@ -823,8 +900,11 @@ class UltraSafeCountryRedirects {
                 <p>
                     <a href="<?php echo wp_nonce_url(admin_url('options-general.php?page=ultra-safe-redirects&debug_database=1'), 'debug_database', 'nonce'); ?>"
                        class="button button-secondary">🔧 Run Database Debug Test</a>
+
+                    <a href="<?php echo wp_nonce_url(admin_url('options-general.php?page=ultra-safe-redirects&test_redirect=1'), 'test_redirect', 'nonce'); ?>"
+                       class="button button-secondary">🌍 Test Redirect Logic</a>
                 </p>
-                <p><small>This will run comprehensive database tests and show detailed error information.</small></p>
+                <p><small>Database test checks the database. Redirect test checks if the redirect logic is working.</small></p>
             </div>
         </div>
         <?php
