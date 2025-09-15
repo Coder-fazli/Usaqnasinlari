@@ -233,11 +233,25 @@ class UltraSafeCountryRedirects {
                 }
             }
 
-            // Test database connection
+            // Test database connection and table access
             $test_query = $wpdb->get_var("SELECT COUNT(*) FROM {$this->table_name}");
             if ($test_query === null && $wpdb->last_error) {
                 throw new Exception('Database connection error: ' . $wpdb->last_error);
             }
+
+            // Validate data before insert
+            if (strlen($url) > 500) {
+                throw new Exception('URL too long (max 500 characters)');
+            }
+            if (strlen($country) > 2) {
+                throw new Exception('Country code too long (max 2 characters)');
+            }
+            if (strlen($redirect_to) > 500) {
+                throw new Exception('Redirect URL too long (max 500 characters)');
+            }
+
+            // Clear any previous errors
+            $wpdb->flush();
 
             $result = $wpdb->insert(
                 $this->table_name,
@@ -250,9 +264,38 @@ class UltraSafeCountryRedirects {
                 array('%s', '%s', '%s', '%d')
             );
 
+            // Detailed error reporting
             if ($result === false) {
-                $error_msg = $wpdb->last_error ? $wpdb->last_error : 'Unknown database error';
+                $error_details = array();
+
+                if ($wpdb->last_error) {
+                    $error_details[] = 'MySQL Error: ' . $wpdb->last_error;
+                }
+
+                if ($wpdb->last_query) {
+                    $error_details[] = 'Last Query: ' . $wpdb->last_query;
+                }
+
+                // Check table structure
+                $table_info = $wpdb->get_results("DESCRIBE {$this->table_name}");
+                if (empty($table_info)) {
+                    $error_details[] = 'Table structure issue';
+                } else {
+                    $columns = array();
+                    foreach ($table_info as $column) {
+                        $columns[] = $column->Field;
+                    }
+                    $error_details[] = 'Table columns: ' . implode(', ', $columns);
+                }
+
+                $error_msg = !empty($error_details) ? implode(' | ', $error_details) : 'Unknown database insert error';
                 throw new Exception('Database insert failed: ' . $error_msg);
+            }
+
+            // Verify the insert worked
+            $inserted_id = $wpdb->insert_id;
+            if (!$inserted_id) {
+                throw new Exception('Insert appeared successful but no ID returned');
             }
 
             add_action('admin_notices', function() {
@@ -629,15 +672,40 @@ class UltraSafeCountryRedirects {
                 global $wpdb;
                 $table_exists = $wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") == $this->table_name;
                 $db_connection = $wpdb->db_connect(false);
+                $table_structure = array();
+                $record_count = 0;
+
+                if ($table_exists) {
+                    $structure_result = $wpdb->get_results("DESCRIBE {$this->table_name}");
+                    if ($structure_result) {
+                        foreach ($structure_result as $column) {
+                            $table_structure[] = "{$column->Field} ({$column->Type})";
+                        }
+                    }
+                    $record_count = $wpdb->get_var("SELECT COUNT(*) FROM {$this->table_name}");
+                }
                 ?>
                 <ul style="list-style: none;">
                     <li><?php echo $table_exists ? '✅' : '❌'; ?> <strong>Database Table:</strong> <?php echo $table_exists ? 'Exists' : 'Missing'; ?></li>
                     <li><?php echo $db_connection ? '✅' : '❌'; ?> <strong>Database Connection:</strong> <?php echo $db_connection ? 'Connected' : 'Failed'; ?></li>
                     <li>📊 <strong>Table Name:</strong> <code><?php echo esc_html($this->table_name); ?></code></li>
+                    <li>📈 <strong>Records Count:</strong> <?php echo $table_exists ? $record_count : 'N/A'; ?></li>
                     <li>🌐 <strong>WordPress Version:</strong> <?php echo get_bloginfo('version'); ?></li>
                     <li>🔢 <strong>PHP Version:</strong> <?php echo PHP_VERSION; ?></li>
                     <li>🏠 <strong>Home URL:</strong> <code><?php echo esc_url(home_url()); ?></code></li>
+                    <?php if ($wpdb->last_error): ?>
+                    <li>⚠️ <strong>Last Database Error:</strong> <code><?php echo esc_html($wpdb->last_error); ?></code></li>
+                    <?php endif; ?>
                 </ul>
+
+                <?php if ($table_exists && !empty($table_structure)): ?>
+                <h4>Table Structure:</h4>
+                <ul style="font-family: monospace; font-size: 12px;">
+                    <?php foreach ($table_structure as $column): ?>
+                    <li><?php echo esc_html($column); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
 
                 <?php if (!$table_exists): ?>
                 <p style="color: #d32f2f;"><strong>⚠️ Issue Detected:</strong> Database table is missing. This will cause "Error adding redirect". The plugin will attempt to create it when you add your first redirect.</p>
@@ -646,6 +714,9 @@ class UltraSafeCountryRedirects {
                 <?php if (!$db_connection): ?>
                 <p style="color: #d32f2f;"><strong>⚠️ Issue Detected:</strong> Database connection failed. This will prevent the plugin from working.</p>
                 <?php endif; ?>
+
+                <h4>Test Database Operations:</h4>
+                <p><em>Try adding a redirect to see detailed error information if something fails.</em></p>
             </div>
         </div>
         <?php
