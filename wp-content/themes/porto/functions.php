@@ -21,7 +21,7 @@ define( 'PORTO_PLUGINS_URI', PORTO_URI . '/inc/plugins' );             // plugin
 define( 'PORTO_OPTIONS_URI', PORTO_URI . '/inc/admin/theme_options' ); // theme options uri
 define( 'PORTO_LIB_URI', PORTO_URI . '/inc/lib' );                     // library uri
 // License system disabled - no external connections
-// define( 'PORTO_API_URL', 'https://sw-themes.com/activation/porto_wp/' );
+define( 'PORTO_API_URL', '' ); // Empty URL to prevent undefined constant errors
 
 $theme_version = '';
 $theme         = wp_get_theme();

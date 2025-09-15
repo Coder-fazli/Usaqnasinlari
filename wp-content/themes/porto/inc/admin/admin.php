@@ -9,7 +9,8 @@ class Porto_Admin {
 
 	private $_checkedPurchaseCode;
 
-	private $activation_url = PORTO_API_URL . 'verify_purchase.php';
+	// License system disabled - no activation URL needed
+	private $activation_url = '';
 
 	public function __construct() {
 		if ( is_admin_bar_showing() ) {
