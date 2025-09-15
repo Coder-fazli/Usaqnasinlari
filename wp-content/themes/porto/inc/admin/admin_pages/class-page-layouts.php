@@ -31,7 +31,9 @@ if ( ! class_exists( 'Porto_Page_Layouts' ) ) :
 
 		public function enqueue() {
 			if ( defined( 'PORTO_SHORTCODES_URL' ) ) {
-				wp_enqueue_style( 'porto-builder-condition', str_replace( '/shortcodes', '/builders', PORTO_SHORTCODES_URL ) . 'assets/condition.css', array(), PORTO_SHORTCODES_VERSION );
+				// Use PORTO_FUNC_VERSION instead of undefined PORTO_SHORTCODES_VERSION
+				$version = defined( 'PORTO_FUNC_VERSION' ) ? PORTO_FUNC_VERSION : '1.0.0';
+				wp_enqueue_style( 'porto-builder-condition', str_replace( '/shortcodes', '/builders', PORTO_SHORTCODES_URL ) . 'assets/condition.css', array(), $version );
 			}
 			wp_enqueue_script( 'porto-page-layouts', PORTO_JS . '/admin/page-layouts.js', array( 'porto-admin' ), PORTO_VERSION, true );
 			wp_localize_script(

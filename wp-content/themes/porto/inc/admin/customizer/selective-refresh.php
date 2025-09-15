@@ -205,8 +205,9 @@ function porto_customizer_refresh_partials( WP_Customize_Manager $wp_customize )
 				'settings'            => array( 'porto_settings[category-item]', 'porto_settings[shop-product-cols]', 'porto_settings[shop-product-cols-mobile]', 'porto_settings[product-cols]', 'porto_settings[product-cols-mobile]', 'porto_settings[cat-view-type]', 'porto_settings[category-image-hover]', 'porto_settings[product-stock]', 'porto_settings[category-addlinks-convert]', 'porto_settings[category-addlinks-pos]', 'porto_settings[add-to-cart-notification]', 'porto_settings[show_swatch]', 'porto_settings[product-categories]', 'porto_settings[product-review]', 'porto_settings[product-price]', 'porto_settings[product-desc]', 'porto_settings[product-wishlist]', 'porto_settings[product-quickview]', 'porto_settings[product-compare]', 'porto_settings[product-labels]', 'porto_settings[product-sale-label]', 'porto_settings[product-sale-percent]', 'porto_settings[product-new-days]' ),
 				'render_callback'     => function() {
 					if ( defined( 'PORTO_SHORTCODES_URL' ) ) {
-						wp_register_script( 'countdown', PORTO_SHORTCODES_URL . 'assets/js/countdown.min.js', array( 'jquery' ), PORTO_SHORTCODES_VERSION, true );
-						wp_register_script( 'porto_shortcodes_countdown_loader_js', PORTO_SHORTCODES_URL . 'assets/js/countdown-loader.min.js', array( 'jquery' ), PORTO_SHORTCODES_VERSION, true );
+						$version = defined( 'PORTO_FUNC_VERSION' ) ? PORTO_FUNC_VERSION : '1.0.0';
+						wp_register_script( 'countdown', PORTO_SHORTCODES_URL . 'assets/js/countdown.min.js', array( 'jquery' ), $version, true );
+						wp_register_script( 'porto_shortcodes_countdown_loader_js', PORTO_SHORTCODES_URL . 'assets/js/countdown-loader.min.js', array( 'jquery' ), $version, true );
 						wc_get_template_part( 'archive-product-content' );
 					}
 				},
@@ -238,8 +239,9 @@ function porto_customizer_refresh_partials( WP_Customize_Manager $wp_customize )
 							}
 						);
 						if ( defined( 'PORTO_SHORTCODES_URL' ) ) {
-							wp_register_script( 'countdown', PORTO_SHORTCODES_URL . 'assets/js/countdown.min.js', array( 'jquery' ), PORTO_SHORTCODES_VERSION, true );
-							wp_register_script( 'porto_shortcodes_countdown_loader_js', PORTO_SHORTCODES_URL . 'assets/js/countdown-loader.min.js', array( 'jquery' ), PORTO_SHORTCODES_VERSION, true );
+							$version = defined( 'PORTO_FUNC_VERSION' ) ? PORTO_FUNC_VERSION : '1.0.0';
+							wp_register_script( 'countdown', PORTO_SHORTCODES_URL . 'assets/js/countdown.min.js', array( 'jquery' ), $version, true );
+							wp_register_script( 'porto_shortcodes_countdown_loader_js', PORTO_SHORTCODES_URL . 'assets/js/countdown-loader.min.js', array( 'jquery' ), $version, true );
 							wc_get_template_part( 'content', 'single-product' );
 						}
 					}
