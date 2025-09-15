@@ -127,21 +127,33 @@ class UltraSafeCountryRedirects {
                 redirect_to varchar(500) DEFAULT '',
                 is_active tinyint(1) DEFAULT 1,
                 created_at datetime DEFAULT CURRENT_TIMESTAMP,
-                PRIMARY KEY (id),
-                INDEX country_idx (country_code),
-                INDEX active_idx (is_active)
+                PRIMARY KEY (id)
             ) $charset_collate;";
 
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
-            // Hide errors and try to create
+            // Try to create table
             $wpdb->hide_errors();
-            dbDelta($sql);
+            $result = dbDelta($sql);
             $wpdb->show_errors();
 
+            // Alternative method if dbDelta fails
+            if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") != $this->table_name) {
+                $wpdb->query($sql);
+            }
+
         } catch (Exception $e) {
-            // Silently fail - don't break website
-            error_log('Ultra Safe Redirects: Table creation failed - ' . $e->getMessage());
+            // Try simple CREATE TABLE as fallback
+            $simple_sql = "CREATE TABLE IF NOT EXISTS {$this->table_name} (
+                id int(11) NOT NULL AUTO_INCREMENT,
+                url text NOT NULL,
+                country_code varchar(5) NOT NULL DEFAULT 'AZ',
+                redirect_to text,
+                is_active int(1) DEFAULT 1,
+                created_at datetime DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (id)
+            )";
+            $wpdb->query($simple_sql);
         }
     }
 
@@ -375,6 +387,11 @@ class UltraSafeCountryRedirects {
         try {
             global $wpdb;
 
+            // Check if table exists first
+            if ($wpdb->get_var("SHOW TABLES LIKE '{$this->table_name}'") != $this->table_name) {
+                return; // No table, no redirects
+            }
+
             // Safe database query
             $redirects = $wpdb->get_results($wpdb->prepare(
                 "SELECT * FROM {$this->table_name} WHERE country_code = %s AND is_active = 1 LIMIT 10",
@@ -382,7 +399,7 @@ class UltraSafeCountryRedirects {
             ));
 
             if (empty($redirects) || !is_array($redirects)) {
-                return;
+                return; // No redirects configured
             }
 
             foreach ($redirects as $redirect) {
@@ -390,11 +407,20 @@ class UltraSafeCountryRedirects {
                     continue;
                 }
 
-                if (strpos($current_url, $redirect->url) !== false) {
+                // CRITICAL FIX: Use exact match or specific path match, not strpos
+                $redirect_url = trim($redirect->url);
+                $current_path = parse_url($current_url, PHP_URL_PATH);
+                $redirect_path = parse_url($redirect_url, PHP_URL_PATH);
+
+                // Only redirect if it's an EXACT match or specific page match
+                if ($current_url === $redirect_url ||
+                    ($current_path && $redirect_path && $current_path === $redirect_path) ||
+                    ($redirect_path && substr($current_url, -strlen($redirect_path)) === $redirect_path)) {
+
                     $redirect_to = !empty($redirect->redirect_to) ? $redirect->redirect_to : home_url();
 
                     // Prevent redirect loops
-                    if ($current_url === $redirect_to) {
+                    if ($current_url === $redirect_to || strpos($redirect_to, $current_path) !== false) {
                         continue;
                     }
 
