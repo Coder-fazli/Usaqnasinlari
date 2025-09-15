@@ -37,7 +37,8 @@ class UltraSafeCountryRedirects {
         add_action('admin_init', array($this, 'handle_admin_actions'));
 
         // CRITICAL: Only add redirect check if explicitly enabled AND environment is safe
-        if ($this->is_redirect_safe_to_run()) {
+        // Note: We attach the hook even in admin for testing, but the redirect check itself will handle safety
+        if (get_option('uscr_enabled', false) && $this->is_environment_safe()) {
             add_action('wp', array($this, 'ultra_safe_redirect_check'), 9999); // Lowest priority
         }
 
@@ -905,6 +906,28 @@ class UltraSafeCountryRedirects {
                        class="button button-secondary">🌍 Test Redirect Logic</a>
                 </p>
                 <p><small>Database test checks the database. Redirect test checks if the redirect logic is working.</small></p>
+
+                <div style="margin-top: 15px; padding: 10px; background: #e7f3ff; border-left: 4px solid #2196F3;">
+                    <h4>🧪 Test Your Redirects</h4>
+                    <p>To test if redirects actually work, visit one of your protected URLs:</p>
+                    <?php
+                    global $wpdb;
+                    $test_redirects = $wpdb->get_results("SELECT * FROM {$this->table_name} WHERE is_active = 1 LIMIT 3");
+                    if ($test_redirects): ?>
+                        <ul>
+                            <?php foreach ($test_redirects as $redirect): ?>
+                                <li>
+                                    <strong>Test URL:</strong>
+                                    <a href="<?php echo esc_url($redirect->url); ?>" target="_blank"><?php echo esc_html($redirect->url); ?></a>
+                                    <br><small>Should redirect to: <?php echo esc_html($redirect->redirect_to ?: home_url()); ?></small>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <p><small><strong>Note:</strong> Redirects only work on the frontend (not in admin area). Open these links in a new tab to test.</small></p>
+                    <?php else: ?>
+                        <p>No redirects configured yet. Add one above to test.</p>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
         <?php
