@@ -124,7 +124,12 @@ class Porto_Admin {
 	}
 
 	public function check_purchase_code() {
+		// License check disabled - always return verified
+		$this->_checkedPurchaseCode = 'verified';
+		return $this->_checkedPurchaseCode;
 
+		// Original license check code disabled
+		/*
 		if ( ! $this->_checkedPurchaseCode ) {
 			$code         = isset( $_POST['code'] ) ? sanitize_text_field( $_POST['code'] ) : '';
 			$code_confirm = $this->get_purchase_code();
@@ -168,9 +173,15 @@ class Porto_Admin {
 			}
 		}
 		return $this->_checkedPurchaseCode;
+		*/
 	}
 
 	public function curl_purchase_code( $code, $act ) {
+		// External API calls disabled - always return success
+		return array( 'result' => 3, 'message' => 'License check disabled' );
+
+		// Original API call code disabled
+		/*
 		require_once PORTO_PLUGINS . '/importer/importer-api.php';
 		$importer_api = new Porto_Importer_API();
 
@@ -183,6 +194,7 @@ class Porto_Admin {
 			return array( 'message' => $result->get_error_message() );
 		}
 		return $result;
+		*/
 	}
 
 	public function get_purchase_code() {

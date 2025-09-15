@@ -20,7 +20,8 @@ define( 'PORTO_JS', PORTO_URI . '/js' );                          // javascript 
 define( 'PORTO_PLUGINS_URI', PORTO_URI . '/inc/plugins' );             // plugins uri
 define( 'PORTO_OPTIONS_URI', PORTO_URI . '/inc/admin/theme_options' ); // theme options uri
 define( 'PORTO_LIB_URI', PORTO_URI . '/inc/lib' );                     // library uri
-define( 'PORTO_API_URL', 'https://sw-themes.com/activation/porto_wp/' );
+// License system disabled - no external connections
+// define( 'PORTO_API_URL', 'https://sw-themes.com/activation/porto_wp/' );
 
 $theme_version = '';
 $theme         = wp_get_theme();
