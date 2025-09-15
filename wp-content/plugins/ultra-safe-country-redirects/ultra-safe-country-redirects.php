@@ -346,6 +346,13 @@ class UltraSafeCountryRedirects {
             return;
         }
 
+        // Clear any caching headers that might interfere with redirects
+        if (!headers_sent()) {
+            header('Cache-Control: no-cache, no-store, must-revalidate');
+            header('Pragma: no-cache');
+            header('Expires: 0');
+        }
+
         try {
             // Get current URL with extensive validation
             $current_url = $this->get_ultra_safe_url();
@@ -510,6 +517,18 @@ class UltraSafeCountryRedirects {
 
                     // Ultra-safe redirect
                     if (filter_var($redirect_to, FILTER_VALIDATE_URL)) {
+                        // Tell LiteSpeed Cache not to cache this response
+                        if (function_exists('litespeed_purge_all')) {
+                            do_action('litespeed_control_set_nocache');
+                        }
+
+                        // Set headers to prevent any caching
+                        if (!headers_sent()) {
+                            header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+                            header('Pragma: no-cache');
+                            header('Expires: Thu, 01 Jan 1970 00:00:00 GMT');
+                        }
+
                         wp_redirect($redirect_to, 302);
                         exit;
                     }
@@ -907,9 +926,19 @@ class UltraSafeCountryRedirects {
                 </p>
                 <p><small>Database test checks the database. Redirect test checks if the redirect logic is working.</small></p>
 
+                <div style="margin-top: 15px; padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107;">
+                    <h4>⚠️ Clear Caches First!</h4>
+                    <p><strong>Before testing redirects:</strong></p>
+                    <ol>
+                        <li><strong>LiteSpeed Cache:</strong> Go to <em>LiteSpeed Cache → Toolbox</em> → Click <strong>"Purge All"</strong></li>
+                        <li><strong>Browser Cache:</strong> Press <strong>Ctrl + F5</strong> for hard refresh</li>
+                        <li><strong>Server Cache:</strong> Wait 2-3 minutes for server cache to expire</li>
+                    </ol>
+                </div>
+
                 <div style="margin-top: 15px; padding: 10px; background: #e7f3ff; border-left: 4px solid #2196F3;">
                     <h4>🧪 Test Your Redirects</h4>
-                    <p>To test if redirects actually work, visit one of your protected URLs:</p>
+                    <p>After clearing caches, test redirects by visiting these URLs in a new browser tab:</p>
                     <?php
                     global $wpdb;
                     $test_redirects = $wpdb->get_results("SELECT * FROM {$this->table_name} WHERE is_active = 1 LIMIT 3");
