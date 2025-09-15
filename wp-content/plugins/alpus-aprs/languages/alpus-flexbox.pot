@@ -1,0 +1,1280 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Alpus Plugin Framework 1.0\n"
+"POT-Creation-Date: 2023-09-21 08:28-0500\n"
+"PO-Revision-Date: 2017-10-09 17:25+0800\n"
+"Last-Translator: alpus <alpus@example.com>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
+"__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: assets\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+
+#: admin/options/cache.php:14
+msgid "Generate all summaries."
+msgstr ""
+
+#: admin/options/cache.php:18
+msgid "Generate all summaries"
+msgstr ""
+
+#: admin/options/cache.php:19
+msgid "Start"
+msgstr ""
+
+#: admin/options/cache.php:27 init.php:73
+msgid "Cache"
+msgstr ""
+
+#: admin/options/cache.php:31
+msgid "Reviews Summary Cache"
+msgstr ""
+
+#: admin/options/cache.php:32 inc/class-alpus-aprs.php:728
+msgid "Clear All"
+msgstr ""
+
+#: admin/options/cache.php:37
+msgid "Expiration Time"
+msgstr ""
+
+#: admin/options/cache.php:38
+msgid "Select expiration time for AI product review summary cache."
+msgstr ""
+
+#: admin/options/cache.php:40
+msgid "Day"
+msgstr ""
+
+#: admin/options/cache.php:41
+msgid "Week"
+msgstr ""
+
+#: admin/options/cache.php:42
+msgid "Month"
+msgstr ""
+
+#: admin/options/cache.php:43
+msgid "Year"
+msgstr ""
+
+#: admin/options/options.php:14
+msgid "ChatGPT API"
+msgstr ""
+
+#: admin/options/options.php:18
+msgid "API Key"
+msgstr ""
+
+#: admin/options/options.php:19
+#, php-format
+msgid "You can get your API Key in your %1$sOpenAI Acount%2$s."
+msgstr ""
+
+#: admin/options/options.php:23
+msgid "Text Models"
+msgstr ""
+
+#: admin/options/options.php:25
+msgid ""
+"You can choose any OpenAI Model as you want. ( If you want to update OpenAI models, "
+"please click update button. )"
+msgstr ""
+
+#: admin/options/options.php:32
+msgid "Summary"
+msgstr ""
+
+#: admin/options/options.php:36
+msgid "Title"
+msgstr ""
+
+#: admin/options/options.php:37
+msgid "Please input Product Review Summary Section title."
+msgstr ""
+
+#: admin/options/skin.php:14 admin/options/skin.php:18
+msgid "Layout"
+msgstr ""
+
+#: admin/options/skin.php:19
+msgid "Choose product review summary layout types."
+msgstr ""
+
+#: admin/options/skin.php:21
+msgid "Default"
+msgstr ""
+
+#: admin/options/skin.php:22
+msgid "Wide"
+msgstr ""
+
+#: admin/options/skin.php:23
+msgid "Custom"
+msgstr ""
+
+#: admin/options/skin.php:28
+msgid "Shortcode"
+msgstr ""
+
+#: admin/options/skin.php:29
+msgid "Please insert the shortcode in single product template as you want."
+msgstr ""
+
+#: admin/options/skin.php:42
+msgid "Skin"
+msgstr ""
+
+#: admin/options/skin.php:47
+msgid "Title Font Size(px)"
+msgstr ""
+
+#: admin/options/skin.php:55
+msgid "Title Color"
+msgstr ""
+
+#: admin/options/skin.php:63
+msgid "Content Font Size(px)"
+msgstr ""
+
+#: admin/options/skin.php:71
+msgid "Content Color"
+msgstr ""
+
+#: admin/options/skin.php:79
+msgid "Background Color"
+msgstr ""
+
+#: inc/class-alpus-aprs.php:177
+msgid ""
+"We apologize, but you have exceeded the limit for the free version of the AI product "
+"review summary plugin. Please purchase pro version from "
+msgstr ""
+
+#: inc/class-alpus-aprs.php:197
+msgid "No Review..."
+msgstr ""
+
+#: inc/class-alpus-aprs.php:714
+msgid "AI Product Review Summary Cache"
+msgstr ""
+
+#: inc/class-alpus-aprs.php:718
+msgid "Alpus APRS"
+msgstr ""
+
+#: inc/class-alpus-aprs.php:732
+msgid "Clear All Generated Summaries"
+msgstr ""
+
+#: inc/class-alpus-aprs.php:746
+msgid "Clear Current Product"
+msgstr ""
+
+#: inc/class-alpus-aprs.php:750
+msgid "Clear current product review summary"
+msgstr ""
+
+#: inc/default-options.php:11
+msgid "Reviews Summary by AI:"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ActionFactory.php:232
+msgid "Invalid action - must be a recurring action."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:60
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:75
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:76
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:89
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:19
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:30
+msgid "Scheduled Actions"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:197
+#, php-format
+msgid ""
+"<strong>Action Scheduler:</strong> %1$d <a href=\"%2$s\">past-due action</a> found; "
+"something may be wrong. <a href=\"https://actionscheduler.org/faq/#my-site-has-past-"
+"due-actions-what-can-i-do\" target=\"_blank\">Read documentation &raquo;</a>"
+msgid_plural ""
+"<strong>Action Scheduler:</strong> %1$d <a href=\"%2$s\">past-due actions</a> found; "
+"something may be wrong. <a href=\"https://actionscheduler.org/faq/#my-site-has-past-"
+"due-actions-what-can-i-do\" target=\"_blank\">Read documentation &raquo;</a>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:225
+msgid "About"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:227
+#, php-format
+msgid "About Action Scheduler %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:229
+msgid ""
+"Action Scheduler is a scalable, traceable job queue for background processing large "
+"sets of actions. Action Scheduler works by triggering an action hook to run at some "
+"time in the future. Scheduled actions can also be scheduled to run on a recurring "
+"schedule."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:237
+msgid "Columns"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:239
+msgid "Scheduled Action Columns"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:241
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:96
+msgid "Hook"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:241
+msgid "Name of the action hook that will be triggered."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:242
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:97
+msgid "Status"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:242
+msgid "Action statuses are Pending, Complete, Canceled, Failed"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:243
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:98
+msgid "Arguments"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:243
+msgid "Optional data array passed to the action hook."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:244
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:99
+msgid "Group"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:244
+msgid "Optional action group."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:245
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:100
+msgid "Recurrence"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:245
+msgid "The action's schedule frequency."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:246
+msgid "Scheduled"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:246
+msgid "The date/time the action is/was scheduled to run."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:247
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:102
+msgid "Log"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_AdminView.php:247
+msgid "Activity log for the action."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_DataController.php:133
+#, php-format
+msgid "Stopped the insanity for %d second"
+msgid_plural "Stopped the insanity for %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_DataController.php:137
+msgid "Attempting to reduce used memory..."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_InvalidActionException.php:21
+#, php-format
+msgid "Action [%1$s] has an invalid schedule: %2$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_InvalidActionException.php:40
+#, php-format
+msgid ""
+"Action [%1$s] has invalid arguments. It cannot be JSON decoded to an array. $args = "
+"%2$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:92
+msgid "Delete"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:101
+msgid "Scheduled Date"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:122
+msgid "Claim ID"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:129
+msgid "Run"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:130
+msgid "Process the action now as if it were run as part of a queue"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:133
+msgid "Cancel"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:134
+msgid "Cancel the action now to avoid it being run in future"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:144
+#, php-format
+msgid "%s year"
+msgid_plural "%s years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:149
+#, php-format
+msgid "%s month"
+msgid_plural "%s months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:154
+#, php-format
+msgid "%s week"
+msgid_plural "%s weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:159
+#, php-format
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:164
+#, php-format
+msgid "%s hour"
+msgid_plural "%s hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:169
+#, php-format
+msgid "%s minute"
+msgid_plural "%s minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:174
+#, php-format
+msgid "%s second"
+msgid_plural "%s seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:224
+msgid "Now!"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:260
+#, php-format
+msgid "Every %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:266
+msgid "Non-repeating"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:364
+msgid ""
+"It appears one or more database tables were missing. Attempting to re-create the "
+"missing table(s)."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:381
+#, php-format
+msgid ""
+"Maximum simultaneous queues already in progress (%s queue). No additional queues will "
+"begin processing until the current queues are complete."
+msgid_plural ""
+"Maximum simultaneous queues already in progress (%s queues). No additional queues "
+"will begin processing until the current queues are complete."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:397
+#, php-format
+msgid ""
+"A new queue has begun processing. <a href=\"%s\">View actions in-progress &raquo;</a>"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:400
+#, php-format
+msgid "The next queue will begin processing in approximately %d seconds."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:421
+#, php-format
+msgid "Successfully executed action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:425
+#, php-format
+msgid "Successfully canceled action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:429
+#, php-format
+msgid "Successfully processed change for action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:435
+#, php-format
+msgid "Could not process change for action: \"%1$s\" (ID: %2$d). Error: %3$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:471
+msgid "async"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:485
+#, php-format
+msgid " (%s ago)"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:488
+#, php-format
+msgid " (%s)"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:513
+#, php-format
+msgid "Action Scheduler was unable to delete action %1$d. Reason: %2$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_ListTable.php:661
+msgid "Search hook, args and claim ID"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_QueueCleaner.php:60
+#, php-format
+msgid "It was not possible to determine a valid cut-off time: %s."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_QueueRunner.php:224
+msgid "Every minute"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php:103
+#, php-format
+msgid "This data will be deleted in %s."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php:108
+#, php-format
+msgid ""
+"Action Scheduler has migrated data to custom tables; however, orphaned log entries "
+"exist in the WordPress Comments table. %1$s <a href=\"%2$s\">Learn more &raquo;</a>"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:111
+msgid "Action Scheduler"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:111
+msgid "This section shows details of Action Scheduler."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:114
+msgid "Version:"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:118
+msgid "Data store:"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:122
+msgid "Action Status"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:124
+msgid "Count"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:125
+msgid "Oldest Scheduled Date"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:126
+msgid "Newest Scheduled Date"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Clean_Command.php:88
+#, php-format
+msgid "%d batch processed."
+msgid_plural "%d batches processed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Clean_Command.php:105
+#, php-format
+msgid "There was an error deleting an action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Clean_Command.php:120
+#, php-format
+msgid "%d action deleted."
+msgid_plural "%d actions deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:33
+#: inc/plugins/action-scheduler/classes/WP_CLI/ProgressBar.php:47
+#, php-format
+msgid "The %s class can only be run within WP CLI."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:59
+msgid "There are too many concurrent batches, but the run is forced to continue."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:61
+msgid "There are too many concurrent batches."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:93
+#, php-format
+msgid "Running %d action"
+msgid_plural "Running %d actions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:113
+msgid "The claim has been lost. Aborting current batch."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:138
+#, php-format
+msgid "Started processing action %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:155
+#, php-format
+msgid "Completed processing action %1$s with hook: %2$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:170
+#, php-format
+msgid "Error processing action %1$s: %2$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:30
+#, php-format
+msgid "Registered schema for %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:152
+#, php-format
+msgid "Found %d scheduled task"
+msgid_plural "Found %d scheduled tasks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:169
+#, php-format
+msgid "%d batch executed."
+msgid_plural "%d batches executed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:188
+#, php-format
+msgid "There was an error running the action scheduler: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:205
+#, php-format
+msgid "%d scheduled task completed."
+msgid_plural "%d scheduled tasks completed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler.php:226
+#, php-format
+msgid "%s() was called before the Action Scheduler data store was initialized"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:523
+msgid "Filter"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:650
+#, php-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:685
+msgctxt "status labels"
+msgid "All"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:686
+msgctxt "status labels"
+msgid "Past-due"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php:765
+msgid "Search"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Abstract_QueueRunner.php:155
+msgid ""
+"This action appears to be consistently failing. A new instance will not be scheduled."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:72
+msgid "action created"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:76
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBLogger.php:142
+msgid "action canceled"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:82
+#, php-format
+msgid "action started via %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:84
+msgid "action started"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:92
+#, php-format
+msgid "action complete via %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:94
+msgid "action complete"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:102
+#, php-format
+msgid "action failed via %1$s: %2$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:105
+#, php-format
+msgid "action failed: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:112
+#, php-format
+msgid ""
+"action marked as failed after %s seconds. Unknown error occurred. Check server, PHP "
+"and database error logs to diagnose cause."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:118
+#, php-format
+msgid "unexpected shutdown: PHP Fatal error %1$s in %2$s on line %3$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:123
+msgid "action reset"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:129
+#, php-format
+msgid "action ignored via %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:131
+msgid "action ignored"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:146
+#, php-format
+msgid "There was a failure fetching this action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:148
+msgid "There was a failure fetching this action"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:156
+#, php-format
+msgid "There was a failure scheduling the next instance of this action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Store.php:329
+#, php-format
+msgid ""
+"ActionScheduler_Action::$args too long. To ensure the args column can be indexed, "
+"action args should not be more than %d characters when encoded as JSON."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Store.php:405
+msgid "Complete"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Store.php:406
+msgid "Pending"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Store.php:407
+msgid "In-progress"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Store.php:408
+#: plugin-framework/class-plugin-framework.php:389
+msgid "Failed"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/abstracts/ActionScheduler_Store.php:409
+msgid "Canceled"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/actions/ActionScheduler_Action.php:50
+#, php-format
+msgid "Scheduled action for %1$s will not be executed as no callbacks are registered."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:118
+msgid "Database error."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:126
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:49
+#: inc/plugins/action-scheduler/classes/migration/ActionScheduler_DBStoreMigrator.php:44
+#, php-format
+msgid "Error saving action: %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:396
+msgid "Invalid value for select or count parameter. Cannot query actions."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:454
+msgid ""
+"JSON partial matching not supported in your environment. Please check your MySQL/"
+"MariaDB version."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:471
+#, php-format
+msgid ""
+"The value type for the JSON partial matching is not supported. Must be either "
+"integer, boolean, double or string. %s type provided."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:492
+msgid "Unknown partial args matching value."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:653
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:745
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:776
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1085
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1143
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:515
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:534
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:564
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:987
+#, php-format
+msgid "Unidentified action %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:911
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:717
+#, php-format
+msgid "The group \"%s\" does not exist."
+msgid_plural "The groups \"%s\" do not exist."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:939
+msgctxt "database error"
+msgid "unknown"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:945
+#, php-format
+msgid "Unable to claim actions. Database error: %s."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1042
+#, php-format
+msgid "Unable to release actions from claim id %d."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1112
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:967
+#, php-format
+msgid "Unable to update the status of action %1$d to %2$s."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1173
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:904
+msgid "Invalid action ID. No status found."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1175
+msgid "Unknown status found for action."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:101
+msgid "Unable to save action."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:318
+msgid "Invalid schedule. Cannot save action."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:696
+msgid "Unable to claim actions. Database error."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:824
+#, php-format
+msgid "Unable to unlock claim %s. Database error."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:852
+#, php-format
+msgid "Unable to unlock claim on action %s. Database error."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:878
+#, php-format
+msgid "Unable to mark failure on action %s. Database error."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:1068
+#, php-format
+msgid "%s Support for strings longer than this will be removed in a future version."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:36
+msgctxt "post"
+msgid "Failed"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:38
+#, php-format
+msgid "Failed <span class=\"count\">(%s)</span>"
+msgid_plural "Failed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:51
+msgctxt "post"
+msgid "In-Progress"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php:53
+#, php-format
+msgid "In-Progress <span class=\"count\">(%s)</span>"
+msgid_plural "In-Progress <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:20
+msgid "Scheduled actions are hooks triggered on a cetain date and time."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:31
+msgid "Scheduled Action"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:32
+msgctxt "Admin menu name"
+msgid "Scheduled Actions"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:33
+msgid "Add"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:34
+msgid "Add New Scheduled Action"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:35
+msgid "Edit"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:36
+msgid "Edit Scheduled Action"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:37
+msgid "New Scheduled Action"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:38
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:39
+msgid "View Action"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:40
+msgid "Search Scheduled Actions"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:41
+msgid "No actions found"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php:42
+msgid "No actions found in trash"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_TaxonomyRegistrar.php:14
+msgid "Action Group"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/ActionMigrator.php:95
+#, php-format
+msgid "Unable to remove source migrated action %s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/Config.php:52
+msgid "Source store must be configured before running a migration"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/Config.php:74
+msgid "Source logger must be configured before running a migration"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/Config.php:96
+msgid "Destination store must be configured before running a migration"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/Config.php:118
+msgid "Destination logger must be configured before running a migration"
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/Controller.php:162
+msgid ""
+"Action Scheduler migration in progress. The list of scheduled actions may be "
+"incomplete."
+msgstr ""
+
+#: inc/plugins/action-scheduler/classes/migration/Runner.php:82
+#, php-format
+msgid "Migrating %d action"
+msgid_plural "Migrating %d actions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/action-scheduler/classes/migration/Runner.php:107
+#, php-format
+msgid "Migrated action with ID %1$d in %2$s to ID %3$d in %4$s"
+msgstr ""
+
+#: inc/plugins/action-scheduler/functions.php:134
+#, php-format
+msgid "An integer was expected but \"%1$s\" (%2$s) was received."
+msgstr ""
+
+#: inc/plugins/action-scheduler/functions.php:287
+#, php-format
+msgid "Caught exception while cancelling action: %s"
+msgstr ""
+
+#: init.php:57 plugin-framework/class-plugin-framework.php:59
+msgid "AI Product Review Summary"
+msgstr ""
+
+#: init.php:58 plugin-framework/class-plugin-framework.php:60
+msgid ""
+"Summarize bunch of product reviews in few sentences, so that customers can easily "
+"evaluate the products pros and corns."
+msgstr ""
+
+#: init.php:63
+msgid "General"
+msgstr ""
+
+#: init.php:68
+msgid "Layout & Skin"
+msgstr ""
+
+#: plugin-framework/admin/options/class-plugin-options.php:601
+msgid "Upload"
+msgstr ""
+
+#: plugin-framework/admin/options/class-plugin-options.php:606
+msgid "Reset"
+msgstr ""
+
+#: plugin-framework/admin/views/dashboard.php:49
+#: plugin-framework/admin/views/dashboard.php:72
+msgid "Update"
+msgstr ""
+
+#: plugin-framework/admin/views/dashboard.php:61
+#: plugin-framework/admin/views/dashboard.php:65
+msgid "Purchase"
+msgstr ""
+
+#: plugin-framework/admin/views/dashboard.php:61
+msgid "Install"
+msgstr ""
+
+#: plugin-framework/admin/views/dashboard.php:65
+msgid "Download"
+msgstr ""
+
+#: plugin-framework/admin/views/dashboard.php:82
+#: plugin-framework/class-plugin-framework.php:170
+#: plugin-framework/class-plugin-framework.php:173
+msgid "Documentation"
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:29
+msgid "Version "
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:37
+msgid "Boosts Conversions and Sales"
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:38
+msgid "Plugin to"
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:39
+msgid "Boost Sales"
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:42
+#, php-format
+msgid "We are the world's %s."
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:42
+msgid "Alpus"
+msgstr ""
+
+#: plugin-framework/admin/views/header.php:44
+msgid ""
+"Thanks for using our Alpus plugin framework. We provide lots of professional plugins "
+"with full compatibility with famous themes and advanced features. Activating plugins "
+"will boost your site's sales and popularity."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:68
+msgid "Elementor FlexBox - Nested Carousel"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:69
+msgid ""
+"Alpus Elementor Flexbox Addon is a powerful plugin with nested carousel and flexbox "
+"layouts for enhanced website building."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:75
+msgid "Product Variations Swatch"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:76
+msgid ""
+"The Alpus Product Variations Swatch plugin allows showing your product variations in "
+"a better way as customers can sort out colors, labels and images instead of dropdown."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:84
+msgid "Product Attribute Guide"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:85
+msgid ""
+"The Alpus Product Attribute Guide allows you to describe your product attributes in "
+"detail. Product attribute guide block appears in the product description tab of "
+"product single page."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:93
+msgid "Product Brand"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:94
+msgid ""
+"The Alpus Product Brand plugin allows you to add taxonomy \"Brands\" on your products "
+"easily. It will enhances product details and boost product sales with famous brands."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:102
+msgid "Cookie Consent"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:103
+msgid ""
+"The Alpus Cookie Consent plugin allows you to use cookies to track visitors in some "
+"capacity for analytics or remembering users with comments and popup box for consent."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:111
+msgid "Product Compare"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:112
+msgid ""
+"The Alpus Product Compare plugin allow you to compare products in a simple and "
+"efficient way with detailed  comparison tables and analyze their main features."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:120
+msgid "Product 360 Degree"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:121
+msgid ""
+"The Alpus Product 360 Degree plugin allows you to see every corner of your products "
+"with a full 360° view. It provides customers with as much real shopping experience as "
+"possible."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:129
+msgid "Product Video Popup"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:130
+msgid ""
+"The Alpus Product Video Popup plugin allows you to provide a complete overview of the "
+"product by adding video showing figures from different angles or different ways of "
+"usage."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:138
+msgid "Post Like"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:139
+msgid ""
+"The Alpus Post Like plugin allows you add or remove posts to the favourite list. You "
+"can survey the top rated posts from customers and use that info for your marketing."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:147
+msgid "Custom Fonts"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:148
+msgid ""
+"The Alpus Custom Fonts plugin enables you to use custom fonts for your website. If "
+"you cannot find your favourite fonts from google, you can upload your font and just "
+"use it."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:171
+msgid ""
+"Get yourself used to with the easy to read documentation we have till now. We're "
+"always working to make it easier for you."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:177
+#: plugin-framework/class-plugin-framework.php:180
+msgid "Request a Feature"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:178
+msgid ""
+"Missing something? Share your idea with us, drop us an email about your details. We "
+"will be in touch with you and develop it."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:184
+#: plugin-framework/class-plugin-framework.php:187
+msgid "Need Help?"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:185
+msgid ""
+"We are always here to listen your beautiful voice. A dedicated support team is on "
+"your way to the rescue, the moment you need us."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:236
+msgid "Show Your Love"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:237
+msgid ""
+"Support us by giving a 5 Star rating on our WordPress plugin Repository. It will "
+"inspire us to do better work for you."
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:239
+msgid "Leave a Review"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:406
+msgid "Alpus Addons"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:523
+#: plugin-framework/class-plugin-framework.php:610
+msgid "Save Options"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:524
+#: plugin-framework/class-plugin-framework.php:611
+msgid "Reset Defaults"
+msgstr ""
+
+#: plugin-framework/class-plugin-framework.php:524
+#: plugin-framework/class-plugin-framework.php:611
+msgid ""
+"If you continue with this action, you will reset all options in this page.\\nAre you "
+"sure?"
+msgstr ""
+
+#: plugin-framework/install/class-plugin-install.php:114
+msgid "Activating"
+msgstr ""
+
+#: plugin-framework/install/class-plugin-install.php:129
+msgid "Updating"
+msgstr ""
+
+#: plugin-framework/install/class-plugin-install.php:144
+msgid "Installing"
+msgstr ""
+
+#: plugin-framework/install/class-plugin-install.php:158
+msgid "Success"
+msgstr ""

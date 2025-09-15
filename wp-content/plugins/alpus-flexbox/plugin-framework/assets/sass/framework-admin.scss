@@ -1,0 +1,920 @@
+/*
+Framework Admin
+ - Header
+ - Footer
+*/
+
+@import "base/config";
+@import "base/mixins";
+@import "base/direction";
+
+// Logo
+.dashicons-alpus-addon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/logo-white.svg);
+    background-size: cover;
+    width: 26px;
+    height: 12px;
+    padding: 7px;
+  }
+}
+
+.toplevel_page_alpus-addons .toplevel_page_alpus-addons {
+  background: $primary-color !important;
+
+  &:after {
+    content: none !important;
+  }
+}
+
+#wp-admin-bar-alpus {
+  > a {
+    background: $primary-color !important;
+  }
+
+  &:hover > a.ab-item,
+  &.hover > a.ab-item,
+  &:hover span.ab-label,
+  &.hover span.ab-label,
+  & a:focus span.ab-label {
+    color: #fff !important;
+  }
+}
+
+#adminmenu li.toplevel_page_alpus-addons.menu-top:hover,
+#adminmenu li.toplevel_page_alpus-addons.opensub > a.menu-top,
+#adminmenu li.toplevel_page_alpus-addons > a.menu-top:hover,
+#adminmenu li.toplevel_page_alpus-addons > a.menu-top:focus {
+  color: #fff;
+}
+
+// Header
+.alpus-plugin-header {
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+
+  .alpus-admin-nav {
+    font-size: 14px;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .alpus-admin-nav-panel:not(:last-child) {
+    margin-#{$right}: 40px;
+  }
+
+  a:focus {
+    box-shadow: none;
+  }
+}
+
+.alpus-plugin-header,
+.alpus-plugin-page-header,
+.alpus-plugin-wrap,
+.alpus-plugin-options,
+.alpus-plugin-footer {
+  font-family: "Poppins", sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+
+  p {
+    color: #999;
+  }
+}
+
+.alpus-plugin-header,
+.alpus-plugin-page-header {
+  display: flex;
+  align-items: center;
+  background: #2e353d;
+}
+
+.alpus-plugin-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px 40px;
+  background-image: url(../images/plugins/header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 12px;
+  color: #fff;
+
+  .alpus-plugin-header-left,
+  .alpus-plugin-header-right {
+    flex: 1;
+  }
+
+  .alpus-plugin-header-center {
+    text-align: center;
+  }
+
+  .alpus-plugin-header-right {
+    text-align: $right;
+  }
+
+  .alpus-plugin-logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: inherit;
+  }
+}
+
+.alpus-plugin-page-header {
+  margin: side-values(40px 0 40px 0);
+  background-color: #425868;
+  background-image: url(../images/plugins/page-header.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 47px 9% 43px;
+  line-height: 1.2;
+
+  > * {
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .alpus-plugin-page-header-right {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+    color: #fff;
+    margin-top: -6px;
+    margin-bottom: 10px;
+
+    strong {
+      font-size: 1.25em;
+    }
+  }
+
+  h3 {
+    font-size: 2.3vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    width: 450px;
+    max-width: 80%;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 5.2vw;
+    font-weight: 900;
+    text-align: $right;
+    margin: -15px 4% 0;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.5);
+    width: 670px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    position: absolute;
+    left: 52%;
+    top: 59%;
+    transform: translate(-50%, -50%);
+  }
+
+  .divider {
+    display: inline-block;
+    width: 110px;
+    height: 4px;
+    margin: 2px 0;
+    background-color: #fff;
+  }
+}
+
+.text-stroke {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.15);
+}
+
+.alpus-plugin-logo img {
+  display: block;
+}
+
+.alpus-plugin-header-right {
+  margin-#{$left}: auto;
+}
+
+.toplevel_page_alpus-addons #wpcontent,
+[class*="alpus-addons"] #wpcontent,
+.toplevel_page_alpus-addons #wpfooter,
+[class*="alpus-addons"] #wpfooter {
+  padding-#{$left}: 40px;
+  padding-#{$right}: 37px;
+}
+
+.alpus-plugin-wrap {
+  .card-footer {
+    > a {
+      margin: 0;
+    }
+  }
+
+  .plugin-card {
+    position: relative;
+    border: none;
+    overflow: hidden;
+
+    h3 {
+      font-size: 20px;
+
+      a {
+        color: #313438;
+      }
+
+      span {
+        padding: 2px 6px;
+        margin-#{$left}: 10px;
+        border-radius: 3px;
+        vertical-align: middle;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $primary-color;
+      }
+    }
+
+    .d-loading {
+      opacity: 0;
+      visibility: hidden;
+      z-index: 2;
+
+      i {
+        border-top-color: $primary-color;
+      }
+    }
+  }
+
+  .plugin-card .name,
+  .plugin-card .desc {
+    margin-#{$left}: 160px;
+    margin-#{$right}: 30px;
+  }
+
+  .plugin-icon {
+    border-radius: 3px;
+    width: 140px;
+    height: auto;
+  }
+
+  .action-links {
+    position: absolute;
+    width: auto;
+    top: auto;
+    bottom: 9px;
+    text-align: #{$right};
+    z-index: 1;
+    transition: .3s;
+    
+    input.alpus-switcher {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      transition: inherit;
+
+      &:first-child:last-child {
+        margin-top: -15px;
+      }
+    }
+    a {
+      position: relative;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: inherit;
+    }
+    .button-primary {
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      &:hover,
+      &:focus {
+        background-color: #2271b1;
+        border-color: #2271b1;
+      }
+    }
+  }
+
+  .plugin-card:hover,
+  .plugin-card.installing {
+    .action-links.disabled {
+      transform: translateX(-100%);
+      
+      .alpus-switcher {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .alpus-switcher + a {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  .plugin-card.installing .d-loading {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .card-footer {
+    position: relative;
+    margin-top: 45px;
+    padding: 15px 0 5px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50px;
+      right: -50px;
+      border-top: 1px solid #eee;
+    }
+  }
+
+  .alpus-plugin-page-header {
+    p {
+      color: #666;
+    }
+  }
+}
+
+.toplevel_page_alpus-addons .notice,
+[class*='alpus-addons_page'] .notice {
+  margin-left: 0;
+  margin-right: 0;
+}
+#screen-meta + .notice {
+  margin-top: 40px;
+}
+
+// Plugin Options Panel
+
+.alpus-plugin-options,
+.alpus-plugin-footer {
+  // Buttons
+  .button-primary {
+    padding: 0 40px;
+    min-height: 54px;
+    background-color: #495e6e;
+    border-color: #495e6e;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: #596c7b;
+      border-color: #596c7b;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .button-secondary {
+    padding: 0 40px;
+    min-height: 54px;
+    border-width: 2px;
+    color: #495e6e;
+    background-color: transparent;
+    border-color: #495e6e;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #596c7b;
+      border-color: #596c7b;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+.alpus-plugin-options {
+  position: relative;
+  margin-top: 40px;
+  padding-bottom: 104px;
+
+  .nav-tab-wrapper {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .nav-tab {
+    margin: side-values(0 10px 0 0);
+    border: none;
+    padding: 11px 40px 15px;
+    color: #313438;
+    border-top: 4px solid transparent;
+    background-color: rgba(194, 203, 210, 0.4);
+    transition: background-color 0.3s;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: rgba(194, 203, 210, 0.6);
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-width: 4px 0 0;
+    }
+  }
+
+  .nav-tab-active {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary-color;
+      background-color: #fff;
+      border-color: $primary-color;
+    }
+  }
+
+  .tab-content:not(.active) {
+    display: none;
+  }
+
+  form {
+    background: #fff;
+    padding: 40px;
+
+    th {
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    th {
+      width: 224px;
+    }
+
+    .alpus-plugin-option-desc,
+    td label {
+      color: #716269;
+      margin-top: 14px;
+    }
+
+    p.submit {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+
+      button + button {
+        margin-#{$left}: 10px;
+      }
+    }
+  }
+
+  // Text & Number Style
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  select,
+  textarea {
+    padding: 7px 15px;
+    border-radius: 3px;
+    border-color: #e1e1e1;
+    max-width: none;
+    width: 540px;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: $primary-color;
+    }
+  }
+
+  input[type="password"] {
+    letter-spacing: .2em;
+  }
+
+  textarea {
+    height: 140px;
+  }
+
+  // Checkbox & Radio Style
+  fieldset ul {
+    margin-top: 1px;
+    margin-bottom: 0;
+
+    li:last-child {
+      margin-bottom: 0;
+
+      label {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 1.125rem;
+    height: 1.125rem;
+    box-shadow: none;
+    border-color: #9a9ea4;
+  }
+
+  input[type="radio"] {
+    &:checked:before {
+      margin: 0.25rem;
+    }
+  }
+
+  input[type="checkbox"]:not(.alpus-switcher) {
+    border-radius: 3px;
+
+    &:checked {
+      background: $primary-color;
+      border-color: $primary-color;
+
+      &:before {
+        filter: brightness(10);
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: -0.075rem 0 0 -0.15rem;
+      }
+    }
+  }
+
+  // Colorpicker
+  .wp-picker-container .iris-picker {
+    position: absolute;
+    z-index: 10;
+  }
+
+  // Range
+  .wp-slider-wrapper {
+    display: flex;
+    align-items: center;
+    width: 540px;
+
+    input {
+      flex: 0 0 50px;
+      max-width: 50px;
+      padding: side-values(7px 0 7px 10px);
+    }
+  }
+
+  .wp-slider {
+    flex: 1;
+    height: 4px;
+    margin: side-values(14px 20px 14px 0);
+    border: none;
+    background-color: #d5dadf;
+
+    .ui-slider-handle {
+      top: -0.3em;
+      border: none;
+      box-shadow: 0 1px 5px rgb(0 0 0 / 30%);
+      background: #fff;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  // Button set
+  .alpus-button-set {
+    display: inline-flex;
+
+    .alpus-set-item {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+      & + .alpus-set-item {
+        border-#{$left}-width: 0;
+      }
+
+      &:first-child {
+        border-radius: corner-values(3px 0 0 3px);
+      }
+      &:last-child {
+        border-radius: corner-values(0 3px 3px 0);
+      }
+
+      &:hover {
+        background-color: rgba(73, 94, 110, 0.1);
+        border-color: rgba(73, 94, 110, 0.1);
+        cursor: pointer;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #495e6e;
+        border-color: #495e6e;
+      }
+    }
+  }
+
+  // Image Select
+  .alpus-button-set.alpus-image-select {
+    .alpus-set-item {
+      padding: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 0;
+      opacity: 0.35;
+      filter: grayscale(0.3);
+      background-color: transparent;
+      border-color: #ccc;
+      box-sizing: border-box;
+      transition: 0.3s;
+
+      img {
+        width: 100%;
+      }
+
+      & + .alpus-set-item {
+        border-width: 1px;
+        margin-#{$left}: 20px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+        filter: none;
+      }
+    }
+  }
+}
+
+// Plugin External Links
+.alpus-plugin-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 25%);
+  grid-auto-rows: auto;
+  width: calc(100% + 30px);
+  margin: 7px -15px 0;
+
+  .alpus-external-link {
+    padding: 15px;
+  }
+  .external-link-box {
+    background: #fff;
+    padding: 30px 40px 40px;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      width: 75px;
+      height: 60px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      margin: 10px 0;
+    }
+
+    .alpus-plugin-docs {
+      background-image: url(../images/plugins/docs.png);
+    }
+    .alpus-plugin-feature {
+      background-image: url(../images/plugins/feature.png);
+    }
+    .alpus-plugin-support {
+      background-image: url(../images/plugins/support.png);
+    }
+    .alpus-plugin-review {
+      background-image: url(../images/plugins/review.png);
+    }
+  }
+  .button-primary,
+  .button-secondary {
+    min-height: 0;
+    padding: 6px 29px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .alpus-plugin-footer {
+    .external-link-box {
+      padding: 30px;
+
+      h3 {
+        font-size: 18px;
+      }
+      i {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .alpus-plugin-footer {
+    grid-template-columns: repeat(auto-fill, 33.33%);
+  }
+}
+
+@media (max-width: 991px) {
+  .alpus-plugin-footer {
+    grid-template-columns: repeat(auto-fill, 50%);
+  }
+}
+
+@media (max-width: 575px) {
+  .alpus-plugin-footer {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+}
+
+// Options Dependency
+.display-condition:not(.show) {
+  display: none;
+}
+
+// Switcher Style
+input[type="checkbox"].alpus-switcher {
+  display: inline-block;
+  position: relative;
+  margin-#{$right}: 10px;
+  width: 60px;
+  height: 26px;
+  margin: 0;
+  border-radius: 15px;
+  background: #c9d1d7;
+  box-shadow: none;
+  border: none;
+  transition: background 0.3s;
+
+  &:checked {
+    background: $primary-color;
+  }
+
+  &:checked::before {
+    content: "";
+    margin: 0;
+    transform: translateX(34px);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    #{$left}: 1px;
+    top: 1px;
+    position: absolute;
+    transition: transform 0.3s, background 0.3s;
+  }
+}
+
+/* Upload Option */
+.alpus-upload-img-preview {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  img {
+    max-width: 600px;
+    max-height: 300px;
+    border: 4px solid;
+    border-radius: 4px;
+  }
+}
+.alpus-upload-img-url {
+  display: block;
+  min-width: 50%;
+  margin-bottom: 10px;
+}
+/* Repeater Option */
+
+.alpus-repeater-wrapper {
+  .alpus-add-box-button {
+    min-height: 40px;
+    padding: 0 30px;
+  }
+  .alpus-repeater-row {
+    cursor: pointer;
+    transition: all ease 0.5s;
+  }
+  .button-primary, .button-secondary:not(.alpus-add-box-button) {
+    min-height: 34px;
+    padding: 0 20px;
+  }
+  .alpus-upload-img-preview {
+    margin: 0;
+  }
+  .alpus-add-box,
+  .alpus-repeater-row {
+    width: 70%;
+    border: 1px solid #d9d9d9;
+    box-shadow: none;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    background: white;
+  }
+  .alpus-repeater-content {
+    display: none;
+    position: relative;
+    padding: 30px 15px;
+  }
+  .spinner {
+    float: none;
+  }
+  .spinner.show {
+    visibility: visible;
+  }
+  .alpus-add-box {
+    display: none;
+    padding: 35px;
+  }
+  .alpus-upload-img-url {
+    min-width: 540px;
+  }
+}
+.alpus-repeater-title {
+  position: relative;
+  h3 {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  > span {
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+}
+.alpus-repeater-content-buttons {
+  text-align: right;
+}
+
+.alpus-add-box-buttons button,
+.alpus-repeater-content-buttons button {
+  min-height: 40px !important;
+  padding: 0 30px !important;
+}
+.alpus-repeater-content-row {
+  > div {
+    display: table;
+    margin-bottom: 10px;
+    > div {
+      display: table-cell;
+    }
+    > div:first-child {
+      vertical-align: top;
+      min-width: 227px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.porto-cp-attr-table {
+    overflow: hidden;
+    tbody {
+        display: grid;
+        grid-template-columns: repeat( var(--porto-sp-table-cols), 1fr);
+        padding-top: var( --porto-table-vs, 15px );
+        margin-bottom: calc( -1 * calc( var( --porto-table-vs, 15px ) + 1px ) );
+    }
+    .porto-attr-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 0.01em;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: var( --porto-table-vs, 15px );
+        margin-bottom: var( --porto-table-vs, 15px );
+        border-bottom: 1px solid var(--porto-gray-2);
+    }
+    .porto-attr-title {
+        display: block;
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.615;
+        text-transform: uppercase;
+        color: var(--porto-dark-color);
+        padding: 10px 20px;
+        background-color: var(--porto-gray-2);
+    }
+    .porto-attr-name {
+        margin-right: 10px;
+        .rtl {
+            margin-right: unset;
+            margin-left: 10px;
+        }
+    }
+    th, td {
+        padding: 0;
+        line-height: 1.5;
+    }
+    span {
+        display: block;
+    }
+    .porto-attr-term {
+        text-align: end;
+    }
+}

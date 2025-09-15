@@ -1,0 +1,118 @@
+/* Alpus AI Product Review Summary Backend */
+.alpus-aprs-loading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  
+    &:before {
+        --alpha-change-color-light-1: inherit;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--alpha-change-color-light-1);
+        opacity: 0.6;
+    }
+  
+    &.small i {
+        // position: absolute;
+        left: calc(50% - 10px);
+        top: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+    }
+  
+    i {
+        position: absolute;
+        left: calc(50% - 17px);
+        top: calc(50% - 17px);
+        width: 34px;
+        height: 34px;
+        border: 2px solid transparent;
+        border-top-color: var(--alpha-primary-color, #26c);
+        border-radius: 50%;
+        animation: spin 0.75s infinite linear;
+  
+        &:before {
+            content: "";
+            top: -2px;
+            left: -2px;
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: inherit;
+            border-radius: inherit;
+            animation: spin 1.5s infinite ease;
+        }
+    }
+}
+  
+.alpus-aprs-clear-all {
+    .alpus-plugin-action-button {
+        position: relative;
+
+        &.loading {
+            .alpus-aprs-loading {
+                background-color: rgba(255, 255, 255, .5);
+            }
+        }
+    }
+}
+
+.alpus-aprs-generate-all {
+    .alpus-plugin-action-button {
+        position: relative;
+
+        &.loading {
+            .alpus-aprs-loading {
+                background-color: rgba(255, 255, 255, .5);
+            }
+        }
+
+        &.disabled {
+            pointer-events: none;
+        }
+    }
+}
+
+.alpus-aprs-shortcode {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #f2f3f5;
+}
+
+.alpus-plugin-options td {
+    position: relative;
+}
+
+#alpus-aprs-model-update {
+    position: absolute;
+    left: 565px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 100px;
+    border-radius: 3px;
+    background: #596c7b;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background .3s;
+
+    &:hover {
+        background: lighten(#596c7b, 10%);
+    }
+}
+
+.alpus-aprs-bg-generating-stop {
+    margin-left: 20px !important;
+}

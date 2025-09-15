@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+#alpus-aprs-status {
+    border-radius: 3px;
+    background-color: #36af71;
+    border: none !important;
+    font-family: 'Jost';
+
+    .postbox-header {
+        position: relative;
+        border-bottom: none;
+
+        h2 {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,.5);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: calc(100% - 20px);
+        }
+    }
+
+    #alpus-aprs-sp-status {    
+        padding-top: 5px;
+        margin-bottom: 0;
+        border-bottom: none;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .handle-actions span {
+        color: #fff;
+    }
+
+    .alpus-aprs-sp-summarize-status {
+        margin-bottom: 10px;
+        color: #fff;
+
+        h4 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 13px;
+        }
+
+        span {
+            padding: 0 3px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .alpus-aprs-sp-summary-view,
+    .alpus-aprs-sp-ai-advice-view {
+        border: none;
+        color: #fff;
+        background-color: #222529;
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+
+    .alpus-aprs-sp-summarize-popup,
+    .alpus-aprs-sp-ai-advice-popup {
+        position: fixed;
+        left: 50%;
+        max-width: 600px;
+        padding: 0;
+        transform: translate(-50%,-50%);
+        background: #fff;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+        border-radius: 5px;
+        max-height: calc(100vh - 200px);
+        z-index: 9999;
+        top: -99999px;
+        opacity: 0;
+        visibility: hidden;
+
+        
+        .alpus-aprs-popup-wrapper {
+            padding: 20px;
+        }
+
+        .alpus-aprs-popup-title {
+            margin-bottom: 0;
+            color: #fff;
+        }
+
+        .alpus-aprs-popup-header {
+            position: relative;
+            background: #36af71;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        &.show {
+            top: 50%;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        h5 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        .alpus-aprs-popup-close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            margin-top: -2px;
+            color: #fff;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .alpus-aprs-popup-wrapper {
+            position: relative;
+            max-height: calc(100vh - 310px);
+            overflow: auto;
+        }
+    }
+
+    .alpus-aprs-sp-tags-wrapper {
+        padding-top: 15px;
+        margin-top: 15px;
+        border-top: 1px solid rgba(255,255,255,.2);
+
+        h4 {
+            padding-bottom: 5px;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        .alpus-aprs-sp-tags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .alpus-aprs-sp-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 6px;
+            padding: 3px 6px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    
+    .alpus-aprs-sp-ai-advice-wrapper {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255,255,255,.2);
+
+        h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+    }
+
+    .alpus-aprs-sp-ai-advice-popup {
+        max-width: 1000px;
+        width: calc(100vw - 80px);
+
+        .alpus-aprs-popup-wrapper {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .alpus-aprs-ai-questions {
+            flex: 0 0 200px;
+            margin: 0;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f2f3f5;    
+        }
+
+        .alpus-aprs-ai-question {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #666;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color .3s;
+
+            &:hover:not(.active) {
+                background-color: #444;
+            }
+
+            &.active {
+                background-color: #36af71;
+            }
+
+            > a {
+                color: inherit;
+                text-decoration: none;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .alpus-aprs-ai-body {
+            margin-left: 20px;
+            padding: 20px;
+            flex: 1;
+            min-height: 400px;
+            overflow: auto;
+            font-size: 14px;
+            line-height: 2;
+            border-radius: 10px;
+            background-color: #f2f3f5;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+                border-radius: 0 5px 5px 0;
+                background-color: #ddd;
+                opacity: .1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #aaa;
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+    
+    .alpus-aprs-sp-ai-advice {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .alpus-aprs-ai-body {
+        position: relative;
+
+        .loading > h2 {
+            color: #666;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        .loading {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+          
+        /*
+        * Loading Dots
+        * Can we use pseudo elements here instead :after?
+        */
+        .loading span {
+            display: inline-block;
+            vertical-align: middle;
+            width: .6em;
+            height: .6em;
+            margin: .19em;
+            background: #007DB6;
+            border-radius: .6em;
+            animation: loading 1s infinite alternate;
+        }
+        
+        /*
+        * Dots Colors
+        * Smarter targeting vs nth-of-type?
+        */
+        .loading span:nth-of-type(2) {
+            background: #008FB2;
+            animation-delay: 0.2s;
+        }
+        .loading span:nth-of-type(3) {
+            background: #009B9E;
+            animation-delay: 0.4s;
+        }   
+        .loading span:nth-of-type(4) {
+            background: #00A77D;
+            animation-delay: 0.6s;
+        }
+        .loading span:nth-of-type(5) {
+            background: #00B247;
+            animation-delay: 0.8s;
+        }
+        .loading span:nth-of-type(6) {
+            background: #5AB027;
+            animation-delay: 1.0s;
+        }
+        .loading span:nth-of-type(7) {
+            background: #A0B61E;
+            animation-delay: 1.2s;
+        }
+          
+        /*
+        * Animation keyframes
+        * Use transition opacity instead of keyframes?
+        */
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    .alpus-aprs-ai-chat-input-wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        width: calc(100% - 40px);
+
+        .alpus-aprs-ai-chat-input {
+            margin-right: 10px;
+            height: 40px;
+            border: 1px solid #e1e1e1;
+            border-radius: 3px;
+        }
+
+        .alpus-aprs-ai-chat-send {
+            width: 150px;
+            height: 40px;
+            border-radius: 3px;
+            background-color: #222529;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+
+    .alpus-aprs-ai-chat-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-height: 340px;
+        overflow-y: auto;
+    }
+
+    .alpus-aprs-ai-chat {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        max-width: 60%;
+        background: #444;
+        color: #fff;
+        border-radius: 3px;
+
+        &.ai {
+            align-self: flex-start;
+
+            .loading {
+                display: block;
+                position: static;
+                transform: none;
+
+                span {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+}

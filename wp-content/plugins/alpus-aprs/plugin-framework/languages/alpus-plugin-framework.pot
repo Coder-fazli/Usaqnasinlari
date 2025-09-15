@@ -1,0 +1,275 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Alpus Plugin Framework 1.0\n"
+"POT-Creation-Date: 2023-09-21 08:28-0500\n"
+"PO-Revision-Date: 2017-10-09 17:25+0800\n"
+"Last-Translator: alpus <alpus@example.com>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
+"__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: assets\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+
+#: admin/options/class-plugin-options.php:601
+msgid "Upload"
+msgstr ""
+
+#: admin/options/class-plugin-options.php:606
+msgid "Reset"
+msgstr ""
+
+#: admin/views/dashboard.php:49 admin/views/dashboard.php:72
+msgid "Update"
+msgstr ""
+
+#: admin/views/dashboard.php:61 admin/views/dashboard.php:65
+msgid "Purchase"
+msgstr ""
+
+#: admin/views/dashboard.php:61
+msgid "Install"
+msgstr ""
+
+#: admin/views/dashboard.php:65
+msgid "Download"
+msgstr ""
+
+#: admin/views/dashboard.php:82 class-plugin-framework.php:170
+#: class-plugin-framework.php:173
+msgid "Documentation"
+msgstr ""
+
+#: admin/views/header.php:29
+msgid "Version "
+msgstr ""
+
+#: admin/views/header.php:37
+msgid "Boosts Conversions and Sales"
+msgstr ""
+
+#: admin/views/header.php:38
+msgid "Plugin to"
+msgstr ""
+
+#: admin/views/header.php:39
+msgid "Boost Sales"
+msgstr ""
+
+#: admin/views/header.php:42
+#, php-format
+msgid "We are the world's %s."
+msgstr ""
+
+#: admin/views/header.php:42
+msgid "Alpus"
+msgstr ""
+
+#: admin/views/header.php:44
+msgid ""
+"Thanks for using our Alpus plugin framework. We provide lots of professional plugins "
+"with full compatibility with famous themes and advanced features. Activating plugins "
+"will boost your site's sales and popularity."
+msgstr ""
+
+#: class-plugin-framework.php:59
+msgid "AI Product Review Summary"
+msgstr ""
+
+#: class-plugin-framework.php:60
+msgid ""
+"Summarize bunch of product reviews in few sentences, so that customers can easily "
+"evaluate the products pros and corns."
+msgstr ""
+
+#: class-plugin-framework.php:68
+msgid "Elementor FlexBox - Nested Carousel"
+msgstr ""
+
+#: class-plugin-framework.php:69
+msgid ""
+"Alpus Elementor Flexbox Addon is a powerful plugin with nested carousel and flexbox "
+"layouts for enhanced website building."
+msgstr ""
+
+#: class-plugin-framework.php:75
+msgid "Product Variations Swatch"
+msgstr ""
+
+#: class-plugin-framework.php:76
+msgid ""
+"The Alpus Product Variations Swatch plugin allows showing your product variations in "
+"a better way as customers can sort out colors, labels and images instead of dropdown."
+msgstr ""
+
+#: class-plugin-framework.php:84
+msgid "Product Attribute Guide"
+msgstr ""
+
+#: class-plugin-framework.php:85
+msgid ""
+"The Alpus Product Attribute Guide allows you to describe your product attributes in "
+"detail. Product attribute guide block appears in the product description tab of "
+"product single page."
+msgstr ""
+
+#: class-plugin-framework.php:93
+msgid "Product Brand"
+msgstr ""
+
+#: class-plugin-framework.php:94
+msgid ""
+"The Alpus Product Brand plugin allows you to add taxonomy \"Brands\" on your products "
+"easily. It will enhances product details and boost product sales with famous brands."
+msgstr ""
+
+#: class-plugin-framework.php:102
+msgid "Cookie Consent"
+msgstr ""
+
+#: class-plugin-framework.php:103
+msgid ""
+"The Alpus Cookie Consent plugin allows you to use cookies to track visitors in some "
+"capacity for analytics or remembering users with comments and popup box for consent."
+msgstr ""
+
+#: class-plugin-framework.php:111
+msgid "Product Compare"
+msgstr ""
+
+#: class-plugin-framework.php:112
+msgid ""
+"The Alpus Product Compare plugin allow you to compare products in a simple and "
+"efficient way with detailed  comparison tables and analyze their main features."
+msgstr ""
+
+#: class-plugin-framework.php:120
+msgid "Product 360 Degree"
+msgstr ""
+
+#: class-plugin-framework.php:121
+msgid ""
+"The Alpus Product 360 Degree plugin allows you to see every corner of your products "
+"with a full 360° view. It provides customers with as much real shopping experience as "
+"possible."
+msgstr ""
+
+#: class-plugin-framework.php:129
+msgid "Product Video Popup"
+msgstr ""
+
+#: class-plugin-framework.php:130
+msgid ""
+"The Alpus Product Video Popup plugin allows you to provide a complete overview of the "
+"product by adding video showing figures from different angles or different ways of "
+"usage."
+msgstr ""
+
+#: class-plugin-framework.php:138
+msgid "Post Like"
+msgstr ""
+
+#: class-plugin-framework.php:139
+msgid ""
+"The Alpus Post Like plugin allows you add or remove posts to the favourite list. You "
+"can survey the top rated posts from customers and use that info for your marketing."
+msgstr ""
+
+#: class-plugin-framework.php:147
+msgid "Custom Fonts"
+msgstr ""
+
+#: class-plugin-framework.php:148
+msgid ""
+"The Alpus Custom Fonts plugin enables you to use custom fonts for your website. If "
+"you cannot find your favourite fonts from google, you can upload your font and just "
+"use it."
+msgstr ""
+
+#: class-plugin-framework.php:171
+msgid ""
+"Get yourself used to with the easy to read documentation we have till now. We're "
+"always working to make it easier for you."
+msgstr ""
+
+#: class-plugin-framework.php:177 class-plugin-framework.php:180
+msgid "Request a Feature"
+msgstr ""
+
+#: class-plugin-framework.php:178
+msgid ""
+"Missing something? Share your idea with us, drop us an email about your details. We "
+"will be in touch with you and develop it."
+msgstr ""
+
+#: class-plugin-framework.php:184 class-plugin-framework.php:187
+msgid "Need Help?"
+msgstr ""
+
+#: class-plugin-framework.php:185
+msgid ""
+"We are always here to listen your beautiful voice. A dedicated support team is on "
+"your way to the rescue, the moment you need us."
+msgstr ""
+
+#: class-plugin-framework.php:236
+msgid "Show Your Love"
+msgstr ""
+
+#: class-plugin-framework.php:237
+msgid ""
+"Support us by giving a 5 Star rating on our WordPress plugin Repository. It will "
+"inspire us to do better work for you."
+msgstr ""
+
+#: class-plugin-framework.php:239
+msgid "Leave a Review"
+msgstr ""
+
+#: class-plugin-framework.php:389
+msgid "Failed"
+msgstr ""
+
+#: class-plugin-framework.php:406
+msgid "Alpus Addons"
+msgstr ""
+
+#: class-plugin-framework.php:523 class-plugin-framework.php:610
+msgid "Save Options"
+msgstr ""
+
+#: class-plugin-framework.php:524 class-plugin-framework.php:611
+msgid "Reset Defaults"
+msgstr ""
+
+#: class-plugin-framework.php:524 class-plugin-framework.php:611
+msgid ""
+"If you continue with this action, you will reset all options in this page.\\nAre you "
+"sure?"
+msgstr ""
+
+#: install/class-plugin-install.php:114
+msgid "Activating"
+msgstr ""
+
+#: install/class-plugin-install.php:129
+msgid "Updating"
+msgstr ""
+
+#: install/class-plugin-install.php:144
+msgid "Installing"
+msgstr ""
+
+#: install/class-plugin-install.php:158
+msgid "Success"
+msgstr ""

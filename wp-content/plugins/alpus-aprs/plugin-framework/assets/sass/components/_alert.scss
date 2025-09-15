@@ -1,0 +1,18 @@
+.alpus-swal-modal {
+    font-family: Poppins, sans-serif;
+    border-top: 5px solid #08c;
+
+    .swal-button--confirm {
+        background-color: #495e6e;
+
+        &:hover {
+            background-color: darken(#495e6e, 10%);
+        }
+
+        transition: background-color .3s;
+    }
+
+    .swal-title {
+        font-weight: 700;
+    }
+}

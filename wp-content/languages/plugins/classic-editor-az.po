@@ -1,0 +1,118 @@
+# Translation of Plugins - Classic Editor - Stable (latest release) in Azerbaijani
+# This file is distributed under the same license as the Plugins - Classic Editor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-03-11 10:03:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: az\n"
+"Project-Id-Version: Plugins - Classic Editor - Stable (latest release)\n"
+
+#: classic-editor.php:495
+msgid "Change settings"
+msgstr "Yadda saxla"
+
+#: classic-editor.php:462
+msgid "Default Editor"
+msgstr "Stabil redaktor"
+
+#: classic-editor.php:482
+msgid "Default editor for all sites"
+msgstr "Stabil redaktor bütün saytlar üçün"
+
+#: classic-editor.php:478
+msgid "Editor Settings"
+msgstr "Redaktor ayarları"
+
+#: classic-editor.php:841
+msgctxt "Editor Name"
+msgid "Edit (classic editor)"
+msgstr "Redaktə et(klassik redaktor)"
+
+#: classic-editor.php:834
+msgctxt "Editor Name"
+msgid "Edit (block editor)"
+msgstr "Redaktə et(blok redaktoru)"
+
+#: classic-editor.php:875
+msgctxt "Editor Name"
+msgid "block editor"
+msgstr "blok redaktoru"
+
+#: classic-editor.php:872
+msgctxt "Editor Name"
+msgid "classic editor"
+msgstr "klassik redaktor"
+
+#. translators: %s: post title
+#: classic-editor.php:836
+msgid "Edit &#8220;%s&#8221; in the block editor"
+msgstr "&#8220;%s&#8221; blok redaktorunda redaktə et"
+
+#: classic-editor.php:498
+msgid "Allow site admins to change settings"
+msgstr "Adminlər ayarları dəyişdirə bilsin"
+
+#: classic-editor.php:360
+msgid "Allow users to switch editors"
+msgstr "İstifadəçilər redaktoru dəyişdirə bilsin"
+
+#: classic-editor.php:359
+msgid "Default editor for all users"
+msgstr "Mətn redaktorunu seçin"
+
+#: classic-editor.php:652
+msgid "Editor"
+msgstr "Redaktor"
+
+#. Author URI of the plugin
+msgid "https://github.com/WordPress/classic-editor/"
+msgstr "https://github.com/WordPress/classic-editor/"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/classic-editor/"
+msgstr "https://wordpress.org/plugins/classic-editor/"
+
+#: classic-editor.php:437
+msgid "No"
+msgstr "Xeyr"
+
+#: classic-editor.php:433
+msgid "Yes"
+msgstr "Bəli"
+
+#: classic-editor.php:671
+msgid "Switch to block editor"
+msgstr "Blok redaktoruna keç"
+
+#: classic-editor.php:700
+msgid "Switch to classic editor"
+msgstr "Klassik redaktora keç"
+
+#: classic-editor.php:499
+msgid "By default the block editor is replaced with the classic editor and users cannot switch editors."
+msgstr "Standart olaraq blok redaktoru klassik redaktorla əvəz olundu və istifadəçilər redaktorlar arasında keçid edə bilməzlər."
+
+#. Description of the plugin
+msgid "Enables the WordPress classic editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports the older plugins that extend this screen."
+msgstr "WordPress üçün klassik mətn redaktorunu aktiv edir."
+
+#: classic-editor.php:719
+msgid "Settings"
+msgstr "Ayarlar"
+
+#. Author of the plugin
+msgid "WordPress Contributors"
+msgstr "WordPress Contributors"
+
+#. translators: %s: post title
+#: classic-editor.php:843
+msgid "Edit &#8220;%s&#8221; in the classic editor"
+msgstr "&#8220;%s&#8221; klassik redaktorunda redaktə et"
+
+#. Plugin Name of the plugin
+msgid "Classic Editor"
+msgstr "Klassik redaktor"

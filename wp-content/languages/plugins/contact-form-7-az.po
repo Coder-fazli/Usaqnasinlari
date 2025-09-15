@@ -1,0 +1,786 @@
+# Translation of Plugins - Contact Form 7 - Stable (latest release) in Azerbaijani
+# This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-04-30 18:22:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: az\n"
+"Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#: modules/really-simple-captcha.php:256
+msgid "CAPTCHA (Really Simple CAPTCHA)"
+msgstr "CAPTCHA (Really Simple CAPTCHA)"
+
+#: admin/includes/welcome-panel.php:65 admin/includes/welcome-panel.php:165
+#: modules/recaptcha/recaptcha.php:234
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: modules/recaptcha/recaptcha.php:445 modules/sendinblue/service.php:134
+#: modules/stripe/service.php:143
+msgid "Invalid key values."
+msgstr "Xətalı açar dəyəri."
+
+#: modules/recaptcha/recaptcha.php:450 modules/sendinblue/service.php:141
+#: modules/stripe/service.php:150
+msgid "Settings saved."
+msgstr "Parametrlər qeyd edildi."
+
+#: modules/recaptcha/recaptcha.php:491
+msgid "Site Key"
+msgstr "Sayt Açarı"
+
+#: modules/recaptcha/recaptcha.php:508 modules/stripe/service.php:224
+msgid "Secret Key"
+msgstr "Məxfi Açar"
+
+#: admin/includes/welcome-panel.php:61 modules/text.php:278
+#: modules/text.php:281
+msgid "Akismet"
+msgstr "Akismet"
+
+#: modules/really-simple-captcha.php:283 modules/recaptcha/recaptcha.php:9
+msgid "CAPTCHA"
+msgstr "CAPTCHA"
+
+#: modules/date.php:199 modules/number.php:196 modules/text.php:271
+#: modules/textarea.php:177
+msgid "Default value"
+msgstr "Standart dəyər"
+
+#. translators: %s: [your-name] <[your-email]>
+#: includes/contact-form-template.php:64
+msgid "From: %s"
+msgstr "Kimdən: %s"
+
+#: includes/contact-form-template.php:72 includes/contact-form-template.php:106
+msgid "Message Body:"
+msgstr "Mesaj gövdəsi:"
+
+#: modules/acceptance.php:261 modules/checkbox.php:257 modules/date.php:194
+#: modules/file.php:144 modules/number.php:191 modules/quiz.php:234
+#: modules/really-simple-captcha.php:293 modules/select.php:192
+#: modules/text.php:266 modules/textarea.php:172
+msgid "Name"
+msgstr "Ad"
+
+#: modules/submit.php:26
+msgid "Send"
+msgstr "Göndər"
+
+#: includes/contact-form-template.php:162
+msgid "Sender's message was sent successfully"
+msgstr "Göndərənin mesajı uğurla göndərildi."
+
+#. translators: %s: [your-subject]
+#: includes/contact-form-template.php:69
+msgid "Subject: %s"
+msgstr "Mövzu: %s"
+
+#: includes/contact-form-template.php:190
+msgid "There are terms that the sender must accept"
+msgstr "Göndərənin qəbul etməsi vacib olan şərtlər var."
+
+#: includes/contact-form-template.php:197
+msgid "There is a field that the sender must fill in"
+msgstr "Göndərənin doldruması gərəkən boş bölmələr mövcuddur."
+
+#: modules/text.php:296
+msgid "This field requires author's URL"
+msgstr "Bu hissədə müəllifin sayt ünvanı (URL) olmalıdır"
+
+#: modules/text.php:286
+msgid "This field requires author's name"
+msgstr "Bu hissədə müəllifin adı olmalıdır"
+
+#: includes/contact-form.php:110 includes/contact-form.php:428
+msgid "Untitled"
+msgstr "Başlıqsız"
+
+#: includes/file.php:129
+msgid "Uploaded file is too large"
+msgstr "Yüklənən fayl çox böyükdür"
+
+#: includes/file.php:134
+msgid "Uploading a file fails for PHP error"
+msgstr "Fayl PHP xətasına görə yüklənmədi"
+
+#: includes/file.php:119
+msgid "Uploading a file fails for any reason"
+msgstr "Fayl yükləmədə hansısa səbəbdən səhv baş verdi"
+
+#: includes/contact-form-template.php:176
+msgid "Validation errors occurred"
+msgstr "Təsdiqləmə xətası baş verdi"
+
+#: modules/really-simple-captcha.php:237
+msgid "Your entered code is incorrect."
+msgstr "Daxil etdiyiniz kod səhvdir."
+
+#: modules/text.php:222
+msgid "URL"
+msgstr "URL"
+
+#: modules/number.php:182
+msgid "Slider"
+msgstr "Slayder"
+
+#: admin/includes/help-tabs.php:91
+msgid "For more information:"
+msgstr "Daha çox məlumat:"
+
+#: modules/acceptance.php:271 modules/acceptance.php:274
+#: modules/checkbox.php:262 modules/checkbox.php:265 modules/select.php:197
+#: modules/select.php:200
+msgid "Options"
+msgstr "Parametrlər"
+
+#. Author of the plugin
+msgid "Takayuki Miyoshi"
+msgstr "Takayuki Miyoshi"
+
+#: modules/text.php:218
+msgid "text"
+msgstr "mətn"
+
+#: modules/text.php:220
+msgid "email"
+msgstr "e-poçt"
+
+#: modules/date.php:210 modules/number.php:207
+msgid "Min"
+msgstr "Min"
+
+#: modules/date.php:215 modules/number.php:212
+msgid "Max"
+msgstr "Maks"
+
+#: modules/file.php:114
+msgid "file"
+msgstr "fayl"
+
+#. Description of the plugin
+msgid "Just another contact form plugin. Simple but flexible."
+msgstr "Başqa bir əlaqə forması qoşması. Sadə amma çevik."
+
+#: admin/includes/help-tabs.php:72
+msgid "In <strong>Messages</strong>, you can edit various types of messages used for this contact form. These messages are relatively short messages, like a validation error message you see when you leave a required field blank."
+msgstr "<strong>Mesajlar</strong> içində, bu əlaqə forması üçün istifadə edilən mesajların çeşidli növlərini redaktə edə bilərsiniz. Bu mesajlar, gərəkli bir sahəni boş buraxdığınızda gördüyünüz təsdiqləmə xəta mesajı kimi nisbətən qısa mesajlardır."
+
+#: includes/contact-form.php:48
+msgid "Contact Form"
+msgstr "Əlaqə Forması"
+
+#: modules/really-simple-captcha.php:235
+msgid "The code that sender entered does not match the CAPTCHA"
+msgstr "Göndərənin daxil etdiyi kod CAPTCHA kodu ilə uyğun gəlmir"
+
+#: modules/really-simple-captcha.php:370
+msgid "This contact form contains CAPTCHA fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
+msgstr "Bu əlaqə forması CAPTCHA bloklarından ibarətdir, amma fayllar (%s) üçün müvəqqəti qovluq mövcud deyil və ya yazıla bilən deyildir. Siz qovluq yarada bilər və ya qovluqla əlaqəli əməliyyat qaydalarını (permissions) manual olaraq dəyişə bilərsiniz."
+
+#: modules/really-simple-captcha.php:377
+msgid "This contact form contains CAPTCHA fields, but the necessary libraries (GD and FreeType) are not available on your server."
+msgstr "Bu əlaqə forması CAPTCHA bloklarından ibarətdir, amma vacib kitabxanalar (GD və FreeType) sizin serverdə mümkün deyil."
+
+#: modules/text.php:291
+msgid "This field requires author's email address"
+msgstr "Bu hissədə müəllifin e-poçt ünvanı olmalıdır"
+
+#: admin/includes/editor.php:248
+msgid "You can add customization code snippets here. For details, see %s."
+msgstr "Özəlləşdirmə kod parçalarını burada əlavə edə bilərsiniz. Əlavə məlumatlar üçün baxın: %s."
+
+#: admin/includes/help-tabs.php:16 admin/includes/help-tabs.php:30
+#: admin/includes/help-tabs.php:49
+msgid "Overview"
+msgstr "Əsas Baxış"
+
+#: admin/includes/help-tabs.php:21
+msgid "Available Actions"
+msgstr "Mümkün Hərəkətlər"
+
+#: admin/includes/help-tabs.php:35
+msgid "Form-tags"
+msgstr "Forma-etiketləri"
+
+#: admin/includes/help-tabs.php:40
+msgid "Mail-tags"
+msgstr "Poçt-etiketləri"
+
+#: admin/includes/help-tabs.php:61
+msgid "On this screen, you can manage contact forms provided by Contact Form 7. You can manage an unlimited number of contact forms. Each contact form has a unique ID and Contact Form 7 shortcode ([contact-form-7 ...]). To insert a contact form into a post or a text widget, insert the shortcode into the target."
+msgstr "Bu ekranda, Əlaqə Forması 7 tərəfindən verilən əlaqə formalarını idarə edə bilərsiniz. Liitsiz sayda əlaqə formalarını idarə edə bilərsiniz. Hər bir əlaqə forması bənzərsiz bir ID və Əlaqə Forması 7 qısa koduna  ([contact-form-7 ...]) sahibdir. Bir əlaqə formasını yazı ya da bir mətn parçası içinə əlavə etmək üçün hədəf içinə qısa kodu əlavə edin."
+
+#: admin/includes/help-tabs.php:63
+msgid "Hovering over a row in the contact forms list will display action links that allow you to manage your contact form. You can perform the following actions:"
+msgstr "Əlaqə formaları siyahsındakı bir sətr üzərində mausunuzu tutmaq əlaqə formanzı idarə etməyinizə izin verən hərəkət bağlantılarını göstərəcək. Aşağıdakı hərəkətləri edə bilərsiniz:"
+
+#: admin/includes/help-tabs.php:64
+msgid "<strong>Edit</strong> - Navigates to the editing screen for that contact form. You can also reach that screen by clicking on the contact form title."
+msgstr "<strong>Redaktə et</strong> - Bu əlaqə forması üçün redaktə ekranına yönləndirir. Eyni zamanda əlaqə formasının başlığına tıklayaraq bu ekrana vara bilərsiniz."
+
+#: admin/includes/help-tabs.php:67
+msgid "On this screen, you can edit a contact form. A contact form is comprised of the following components:"
+msgstr "Bu ekranda, bir əlaqə formasını redaktə edə bilərsiniz. Əlaqə forması aşağıdakı vidcetlərdən ibarətdir:"
+
+#: admin/includes/help-tabs.php:68
+msgid "<strong>Title</strong> is the title of a contact form. This title is only used for labeling a contact form, and can be edited."
+msgstr "<strong>Başlıq</strong>, əlaqə formasının başlığıdır. Bu başlıq sadəcə bir əlaqə formasını etiketləmək üçün istifadə edilir və redaktə edilə bilər."
+
+#: admin/includes/help-tabs.php:69
+msgid "<strong>Form</strong> is a content of HTML form. You can use arbitrary HTML, which is allowed inside a form element. You can also use Contact Form 7&#8217;s form-tags here."
+msgstr "<strong>Forma</strong>, HTML formasının içəriyidir. Bir maddə içində izin verilən, seçməli HTML istifadə edə bilərsiniz. Eyni zamanda Əlaqə Forması 7-nin forma-etiketlərini burada istifadə edə bilərsiniz."
+
+#: admin/includes/help-tabs.php:70
+msgid "<strong>Mail</strong> manages a mail template (headers and message body) that this contact form will send when users submit it. You can use Contact Form 7&#8217;s mail-tags here."
+msgstr "<strong>Poçt</strong>, istifadəçilər bunu göndərdiyində bu əlaqə formasının göndəriləcəyi bir poçt şablonunu (başlıqlar və mesaj gövdəsi) idarə edir. Əlaqə Forması 7-nin poçt-etiketlərini burada istifadə edə bilərsiniz."
+
+#: admin/includes/help-tabs.php:71
+msgid "<strong>Mail (2)</strong> is an additional mail template that works similar to Mail. Mail (2) is different in that it is sent only when Mail has been sent successfully."
+msgstr "<strong>Poçt (2)</strong>, Poçt ilə bənzər işləyən əlavə bir poçt şablonudur. Poçt (2) tək fərqi sadəcə Poçt uğurlu olaraq göndərildiyində göndərilir."
+
+#: admin/includes/help-tabs.php:83
+msgid "Any information you provide will not be shared with service providers without your authorization."
+msgstr "Verdiyiniz hər hansı bir bilgi, izniniz olmadan xidmət servisləri ilə paylaşılmayacaqdır."
+
+#. translators: %s: title of form-tag like 'email' or 'checkboxes'
+#: admin/includes/tag-generator.php:46
+msgid "Form-tag Generator: %s"
+msgstr "Forma-etiket Generatoru: %s"
+
+#. translators: 1: blog name, 2: blog URL
+#. translators: 1: blog name, 2: blog URL
+#: includes/contact-form-template.php:77 includes/contact-form-template.php:111
+msgid "This e-mail was sent from a contact form on %1$s (%2$s)"
+msgstr "Bu e-poçt %1$s (%2$s) ünvanındakı əlaqə formasından göndərildi"
+
+#: includes/contact-form-template.php:183
+msgid "Submission was referred to as spam"
+msgstr "Təqdimat spam olaraq göndərildi"
+
+#: includes/contact-form.php:221
+msgid "<code>%1$s</code> property of a <code>WPCF7_ContactForm</code> object is <strong>no longer accessible</strong>. Use <code>%2$s</code> method instead."
+msgstr "<code>WPCF7_ContactForm</code> obyektinin <code>%1$s</code> özəlliyi <strong>artıq əlçatan deyil</strong>. Bunun yerinə <code>%2$s</code> üsulundan istifadə edin."
+
+#: modules/acceptance.php:241
+msgid "acceptance"
+msgstr "qəbul"
+
+#: modules/acceptance.php:249
+msgid "Generate a form-tag for an acceptance checkbox. For more details, see %s."
+msgstr "Qəbul təsdiqləmə qutusu üçün bir forma-etiketi hazırlayır. Daha çox məlumat üçün baxın: %s."
+
+#: modules/acceptance.php:281 modules/checkbox.php:278 modules/date.php:223
+#: modules/file.php:159 modules/number.php:220 modules/quiz.php:250
+#: modules/really-simple-captcha.php:303 modules/really-simple-captcha.php:318
+#: modules/select.php:210 modules/submit.php:70 modules/text.php:306
+#: modules/textarea.php:183
+msgid "Id attribute"
+msgstr "Id atributu"
+
+#: modules/acceptance.php:286 modules/checkbox.php:283 modules/date.php:228
+#: modules/file.php:164 modules/number.php:225 modules/quiz.php:255
+#: modules/really-simple-captcha.php:308 modules/really-simple-captcha.php:323
+#: modules/select.php:215 modules/submit.php:75 modules/text.php:311
+#: modules/textarea.php:188
+msgid "Class attribute"
+msgstr "Sinif atributu"
+
+#: modules/acceptance.php:299 modules/checkbox.php:296 modules/date.php:240
+#: modules/file.php:177 modules/number.php:237 modules/quiz.php:268
+#: modules/really-simple-captcha.php:335 modules/select.php:228
+#: modules/submit.php:88 modules/text.php:324 modules/textarea.php:201
+msgid "Insert Tag"
+msgstr "Etiket daxil et"
+
+#: modules/checkbox.php:215
+msgid "checkboxes"
+msgstr "təsdiqləmə qutuları"
+
+#: modules/checkbox.php:217
+msgid "radio buttons"
+msgstr "radio düymələri"
+
+#: modules/checkbox.php:230
+msgid "Generate a form-tag for a group of checkboxes. For more details, see %s."
+msgstr "Təsdiqləmə qutuları qrupu üçün bir forma-etiketi hazırlayır. Daha çox məlumat üçün baxın: %s."
+
+#: modules/checkbox.php:232
+msgid "Generate a form-tag for a group of radio buttons. For more details, see %s."
+msgstr "Radio düymələri qrupu üçün bir forma-etiketi hazırlayır. Daha çox məlumat üçün baxın: %s."
+
+#: modules/checkbox.php:246 modules/checkbox.php:249 modules/date.php:184
+#: modules/date.php:187 modules/file.php:134 modules/file.php:137
+#: modules/number.php:176 modules/number.php:179 modules/select.php:182
+#: modules/select.php:185 modules/text.php:256 modules/text.php:259
+#: modules/textarea.php:162 modules/textarea.php:165
+msgid "Field type"
+msgstr "Sahə növü"
+
+#: modules/checkbox.php:250 modules/date.php:188 modules/file.php:138
+#: modules/number.php:185 modules/select.php:186 modules/text.php:260
+#: modules/textarea.php:166
+msgid "Required field"
+msgstr "Gərəkli sahə"
+
+#: modules/checkbox.php:267 modules/select.php:202
+msgid "One option per line."
+msgstr "Sətr başına bir seçim."
+
+#: modules/checkbox.php:268
+msgid "Put a label first, a checkbox last"
+msgstr "Öncə bir etiket qoyun, sonra təsdiqləmə qutusunu"
+
+#: modules/checkbox.php:269
+msgid "Wrap each item with label element"
+msgstr "Hər maddəni etiket maddəsi ilə sürüşdür"
+
+#: modules/checkbox.php:271
+msgid "Make checkboxes exclusive"
+msgstr "Təsdiqləmə qutularını özəl et"
+
+#: modules/checkbox.php:301 modules/date.php:245 modules/number.php:242
+#: modules/select.php:233 modules/text.php:329 modules/textarea.php:206
+msgid "To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab."
+msgstr "Poçt sahəsindəki bu sahə vasitəsi ilə dəyər girişini istifadə etmək üçün, Poçt səkməsindəki sahə içinə qarşılıq verən poçt-etiketini (%s) əlavə etməyiniz gərəkdir."
+
+#: modules/date.php:141
+msgid "Date format that the sender entered is invalid"
+msgstr "Göndərənin daxil etdiyi tarix formatı keçərsizdir"
+
+#: modules/date.php:146
+msgid "Date is earlier than minimum limit"
+msgstr "Tarix, ən az limitdən daha erkəndir "
+
+#: modules/date.php:151
+msgid "Date is later than maximum limit"
+msgstr "Tarix, ən çox limitdən daha gecdir"
+
+#: modules/date.php:164
+msgid "date"
+msgstr "tarix"
+
+#: modules/date.php:172
+msgid "Generate a form-tag for a date input field. For more details, see %s."
+msgstr "Tarix girişi sahəsi üçün bir forma-etiketi hazırlayır. Daha çox məlumat üçün baxın: %s."
+
+#: modules/date.php:201 modules/number.php:198 modules/text.php:273
+#: modules/textarea.php:179
+msgid "Use this text as the placeholder of the field"
+msgstr "Bu mətndən sahənin yer tutucusu kimi istifadə et"
+
+#: modules/date.php:205 modules/date.php:208 modules/number.php:202
+#: modules/number.php:205
+msgid "Range"
+msgstr "Aralıq"
+
+#: modules/file.php:122
+msgid "Generate a form-tag for a file uploading field. For more details, see %s."
+msgstr "Fayl göndərmə sahəsi üçün bir forma-etiketi hazırlayır. Daha çox məlumat üçün baxın: %s."
+
+#: modules/file.php:149
+msgid "File size limit (bytes)"
+msgstr "Fayl ölçüsünün limiti (bayt)"
+
+#: modules/file.php:154
+msgid "Acceptable file types"
+msgstr "Qəbul edilən fayl növləri"
+
+#: modules/file.php:182
+msgid "To attach the file uploaded through this field to mail, you need to insert the corresponding mail-tag (%s) into the File Attachments field on the Mail tab."
+msgstr "Bu sahə vasitəsi iləa göndərilən faylı poçta əlavə etmək üçün, Poçt səkməsindəki Fayl Əlavələri sahəsi içinə qarşılıq verən poçt-etiketini (%s) əlavə etməyiniz gərəkdir."
+
+#: modules/number.php:133
+msgid "Number format that the sender entered is invalid"
+msgstr "Göndərənin daxil etdiyi rəqəm formatı keçərsizdir"
+
+#: modules/number.php:138
+msgid "Number is smaller than minimum limit"
+msgstr "Rəqəm ən az limitdən daha kiçikdir"
+
+#: modules/number.php:143
+msgid "Number is larger than maximum limit"
+msgstr "Rəqəm maksimal limitdən böyükdür"
+
+#: modules/number.php:156
+msgid "number"
+msgstr "rəqəm"
+
+#: modules/number.php:164
+msgid "Generate a form-tag for a field for numeric value input. For more details, see %s."
+msgstr "Rəqəmli dəyər giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/number.php:181
+msgid "Spinbox"
+msgstr "Döndürmə qutusu"
+
+#: modules/quiz.php:198
+msgid "Sender doesn't enter the correct answer to the quiz"
+msgstr "Göndərən kiçik sorğu cavabını düzgün daxil etmədi"
+
+#: modules/quiz.php:214
+msgid "quiz"
+msgstr "kiçik sorğu"
+
+#: modules/quiz.php:222
+msgid "Generate a form-tag for a question-answer pair. For more details, see %s."
+msgstr "Sual-cavab cütlüyü üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/quiz.php:224
+msgid "Quiz"
+msgstr "Kiçik Sorğu"
+
+#: modules/quiz.php:239 modules/quiz.php:242
+msgid "Questions and answers"
+msgstr "Suallar və Cavablar"
+
+#: modules/quiz.php:244
+msgid "One pipe-separated question-answer pair (e.g. The capital of Brazil?|Rio) per line."
+msgstr "Sətr başına bir boru simvolları ilə ayrılmış sual-cavab cütlüyü (məs. Azərbaycanın paytaxtı?|Bakı)."
+
+#. translators: %s: link labeled 'Really Simple CAPTCHA'
+#: modules/really-simple-captcha.php:270
+msgid "To use CAPTCHA, you first need to install and activate %s plugin."
+msgstr "CAPTCHA istifadə etmək üçün, öncə %s qoşmasını qurmağınız və aktivləşdirməyiniz gərəkdir."
+
+#: modules/really-simple-captcha.php:281
+msgid "Generate form-tags for a CAPTCHA image and corresponding response input field. For more details, see %s."
+msgstr "Forma-etiketlərini bir CAPTCHA rəsmi və qarşılıq verən cavab giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/really-simple-captcha.php:300
+msgid "Image settings"
+msgstr "Şəkil parametrləri"
+
+#: modules/really-simple-captcha.php:315
+msgid "Input field settings"
+msgstr "Daxiletmə (input field) parametrləri"
+
+#: modules/select.php:163
+msgid "drop-down menu"
+msgstr "aşağı-açılan menyu"
+
+#: modules/select.php:170
+msgid "Generate a form-tag for a drop-down menu. For more details, see %s."
+msgstr "Aşağı-açılan menyu üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/select.php:203
+msgid "Allow multiple selections"
+msgstr "Çoxlu seçimlərə izin ver"
+
+#: modules/select.php:204
+msgid "Insert a blank item as the first option"
+msgstr "İlk seçim olaraq boş bir maddə əlavə et"
+
+#: modules/submit.php:46
+msgid "submit"
+msgstr "göndər"
+
+#: modules/submit.php:53
+msgid "Generate a form-tag for a submit button. For more details, see %s."
+msgstr "Göndər düyməsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/submit.php:65
+msgid "Label"
+msgstr "Etiket"
+
+#: modules/text.php:188
+msgid "Email address that the sender entered is invalid"
+msgstr "Göndərənin daxil etdiyi e-poçt ünvanı düzgün deyildir"
+
+#: modules/text.php:195
+msgid "URL that the sender entered is invalid"
+msgstr "Göndərənin daxil etdiyi URL keçərsizdir"
+
+#: modules/text.php:202
+msgid "Telephone number that the sender entered is invalid"
+msgstr "Göndərənin daxil etdiyi telefon nömrəsi keçərsizdir"
+
+#: modules/text.php:224
+msgid "tel"
+msgstr "tel"
+
+#: modules/text.php:237
+msgid "Generate a form-tag for a single-line plain text input field. For more details, see %s."
+msgstr "Tək-sətrli düz mətn giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/text.php:239
+msgid "Generate a form-tag for a single-line email address input field. For more details, see %s."
+msgstr "Tək-sətrli e-poçt ünvanı giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/text.php:241
+msgid "Generate a form-tag for a single-line URL input field. For more details, see %s."
+msgstr "Tək-sətrli URL giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/text.php:243
+msgid "Generate a form-tag for a single-line telephone number input field. For more details, see %s."
+msgstr "Tək-sətrli telefon giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s."
+
+#: modules/textarea.php:142
+msgid "text area"
+msgstr "çoxlu mətn sahəsi"
+
+#: modules/textarea.php:150
+msgid "Generate a form-tag for a multi-line text input field. For more details, see %s."
+msgstr "Çox-sətrli mətn giriş sahəsi üçün bir forma-etiketi hazırlayır. Daha ətraflı məlumat üçün: %s. "
+
+#. translators: title of your first contact form. %d: number fixed to '1'
+#: load.php:183
+msgid "Contact form %d"
+msgstr "Əlaqə forması %d "
+
+#: admin/includes/help-tabs.php:73
+msgid "<strong>Additional Settings</strong> provides a place where you can customize the behavior of this contact form by adding code snippets."
+msgstr "<strong>Əlavə Parametlər</strong>, kod parçaları əlavə edərək bu əlaqə forması davranışını özəlləşdirə bildiyiniz bir yer təmin edər."
+
+#: admin/includes/help-tabs.php:76
+msgid "While form-tags have a comparatively complex syntax, you don&#8217;t need to know the syntax to add form-tags because you can use the straightforward tag generator (<strong>Generate Tag</strong> button on this screen)."
+msgstr "Forma-etiketləri nisbətən qarışıq sintaksisə sahibkən, forma-etiketlərini əlavə etmək üçün sintaksis bilməyinizə lüzum yoxdur, çünki birbaşa etiket generatorundan istifadə edə bilərsiniz (bu ekrandakı <strong>Etiket Generatoru</strong> düyməsi)."
+
+#: admin/includes/help-tabs.php:78
+msgid "A mail-tag is also a short code enclosed in square brackets that you can use in every Mail and Mail (2) field. A mail-tag represents a user input value through an input field of a corresponding form-tag."
+msgstr "Poçt-etiketi eyni zamanda hər Poçt və Poçt (2) sahəsində istifadə edə biləcəyiniz bucaqlı mötərizələrlə bağlanan bir qısa koddur. Bir poçt-etiketi bir forma-etiketinə qarşılıq verən bir giriş sahəsindən edilən bir istifadəçi giriş dəyərini təmsil edər."
+
+#: admin/includes/help-tabs.php:75
+msgid "A form-tag is a short code enclosed in square brackets used in a form content. A form-tag generally represents an input field, and its components can be separated into four parts: type, name, options, and values. Contact Form 7 supports several types of form-tags including text fields, number fields, date fields, checkboxes, radio buttons, menus, file-uploading fields, CAPTCHAs, and quiz fields."
+msgstr "Forma-etiketi, bir forma içəriyində istifadə edilən bucaqlı mötərizələrlə bağlanan bir qısa koddur. Forma-etiketi əsasən bir giriş sahəsini təmsil edər və vidcetləri dörd parçaya ayrıla bilir: növ, adı, seçimlər və dəyərlər. Əlaqə Forması 7; mətn sahələrinin, rəqəm sahələrinin, tarix sahələrinin, təsdiqləmə qutularının, radio düymələrinin, menyuların, fayl göndərmə sahələrinin, CAPTCHA-ların və kiçik sorğu sahələrinin bir neçə növünü dəstəkləyər."
+
+#: admin/includes/help-tabs.php:79
+msgid "There are also special mail-tags that have specific names, but don&#8217;t have corresponding form-tags. They are used to represent meta information of form submissions like the submitter&#8217;s IP address or the URL of the page."
+msgstr "Ayrıca bəlli adları olan özəl poçt-etiketləri vardır. ancaq forma-etiketlərinə qarşılıq gəlməz. Bunlar, göndərənin IP ünvanı ya da səhifənin URL kimi forma göndərişlərinin meta bilgilərini təmsil etmək üçün istifadə edilir"
+
+#: admin/includes/help-tabs.php:81
+msgid "On this screen, you can manage services that are available through Contact Form 7. Using API will allow you to collaborate with any services that are available."
+msgstr "Bu ekranda, Əlaqə Forması 7 vasitəsi ilə istifadə edilə bilinən servisləri idarə edə bilərsiniz. API istifadə etmək, istifadə edilə bilinən hər hansı bir servis ilə iş birliyi etməyi təmin edəcək."
+
+#: admin/includes/help-tabs.php:82
+msgid "You may need to first sign up for an account with the service that you plan to use. When you do so, you would need to authorize Contact Form 7 to access the service with your account."
+msgstr "İstifadə etməyi planladığınız servis ilə bir hesaba öncə qeydiyyatdan keçməyiniz gərəkə bilər. Bunu etdiyinizdə, hesabınızla servisə qoşulmaq üçün Əlaqə Formsı 7-yə səlahiyyət verməyiniz gərəkdir."
+
+#: admin/includes/help-tabs.php:65
+msgid "<strong>Duplicate</strong> - Clones that contact form. A cloned contact form inherits all content from the original, but has a different ID."
+msgstr "<strong>Dublikat</strong> - Bu əlaqə formasını çoxaldır. Çoxaldılmış bir əlaqə forması bütün içəriyi orijinalından təslim alır ancaq fərqi bir ID sahibdir."
+
+#: admin/admin.php:30
+msgid "Contact"
+msgstr "Əlaqə"
+
+#: admin/edit-contact-form.php:168
+#: admin/includes/class-contact-forms-list-table.php:90
+msgid "Delete"
+msgstr "Sil"
+
+#: admin/edit-contact-form.php:245 admin/includes/editor.php:222
+msgid "Messages"
+msgstr "Mesajlar"
+
+#: admin/edit-contact-form.php:26 admin/edit-contact-form.php:146
+msgid "Save"
+msgstr "Yaddaşda saxla"
+
+#: admin/includes/editor.php:163 includes/contact-form-template.php:40
+msgid "Subject"
+msgstr "Mövzu"
+
+#: admin/includes/help-tabs.php:94
+msgid "Support"
+msgstr "Dəstək"
+
+#: admin/edit-contact-form.php:139
+msgid "Status"
+msgstr "Status"
+
+#: admin/includes/class-contact-forms-list-table.php:14
+msgid "Author"
+msgstr "Müəllif"
+
+#: admin/includes/class-contact-forms-list-table.php:15
+msgid "Date"
+msgstr "Tarix"
+
+#: admin/includes/class-contact-forms-list-table.php:12
+msgid "Title"
+msgstr "Başlıq"
+
+#: admin/admin.php:144
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr "Bu səhifəni tərk etsəniz etmiş olduğunuz dəyişikliklər sıfırlanacaqdır."
+
+#: admin/edit-contact-form.php:153
+#: admin/includes/class-contact-forms-list-table.php:187
+msgid "Duplicate"
+msgstr "Dublikat"
+
+#: admin/edit-contact-form.php:95
+msgid "Enter title here"
+msgstr "Başlığı buraya daxil edin"
+
+#: admin/includes/class-contact-forms-list-table.php:13
+msgid "Shortcode"
+msgstr "Qısakod"
+
+#: admin/includes/editor.php:84
+msgid "Mail (2)"
+msgstr "Poçt (2)"
+
+#. Plugin Name of the plugin
+#: admin/admin.php:29 modules/flamingo.php:208 includes/block-editor/index.js:1
+msgid "Contact Form 7"
+msgstr "Əlaqə Forması 7"
+
+#: admin/admin.php:41 admin/admin.php:409 includes/contact-form.php:47
+msgid "Contact Forms"
+msgstr "Əlaqə Formaları"
+
+#: admin/admin.php:52 admin/admin.php:416 admin/edit-contact-form.php:47
+msgid "Add New"
+msgstr "Yenisini əlavə et"
+
+#: admin/edit-contact-form.php:193 admin/includes/help-tabs.php:93
+msgid "FAQ"
+msgstr "ÇVS"
+
+#: admin/edit-contact-form.php:237 admin/includes/editor.php:61
+msgid "Form"
+msgstr "Forma"
+
+#: admin/edit-contact-form.php:241 admin/includes/editor.php:93
+msgid "Mail"
+msgstr "Poçt"
+
+#: admin/admin.php:40 admin/edit-contact-form.php:38
+msgid "Edit Contact Form"
+msgstr "Əlaqə Formasını redaktə et"
+
+#: admin/admin.php:51 admin/edit-contact-form.php:36
+msgid "Add New Contact Form"
+msgstr "Yeni Əlaqə Forması əlavə et"
+
+#: admin/admin.php:553
+msgid "Contact form saved."
+msgstr "Əlaqə forması yaddaşda saxlanıldı"
+
+#: admin/admin.php:555
+msgid "Contact form deleted."
+msgstr "Əlaqə forması silindi"
+
+#. translators: 1: version of Contact Form 7, 2: version of WordPress, 3: URL
+#: admin/admin.php:649
+msgid "<strong>Contact Form 7 %1$s requires WordPress %2$s or higher.</strong> Please <a href=\"%3$s\">update WordPress</a> first."
+msgstr "<strong>Əlaqə Forması 7 %1$s üçün WordPress %2$s daha təzə versiya tələb olunur.</strong>Zəhmət olmasa öncə<a href=\"%3$s\"> WordPress-i yeniləyin</a>."
+
+#: admin/includes/welcome-panel.php:216
+msgid "Dismiss"
+msgstr "Bağla"
+
+#: admin/admin.php:673
+msgid "You are not allowed to edit this contact form."
+msgstr "Bu əlaqə formasını redaktə etməyinizə izin verilmir."
+
+#: admin/edit-contact-form.php:118
+msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
+msgstr "Bu qısa kodu köçürün və yazınızın, səhifənizin ya da mətn parçası olan içəriyinizin içinə yapışdırın:"
+
+#: admin/edit-contact-form.php:125
+msgid "You can also use this old-style shortcode:"
+msgstr "Ayrıca bu əski stil qısa koddan istifadə edə bilərsiniz:"
+
+#: admin/includes/help-tabs.php:92
+msgid "Docs"
+msgstr "Sənədlər"
+
+#. translators: %d: number of additional settings
+#: admin/edit-contact-form.php:265
+msgid "Additional Settings (%d)"
+msgstr "Əlavə Parametrlər (%d)"
+
+#: admin/edit-contact-form.php:267 admin/includes/editor.php:252
+msgid "Additional Settings"
+msgstr "Əlavə Parametrlər"
+
+#: admin/includes/class-contact-forms-list-table.php:169
+msgid "Edit"
+msgstr "Redaktə et "
+
+#. translators: %s: title of contact form
+#: admin/includes/class-contact-forms-list-table.php:122
+msgid "Edit &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; Redaktə et "
+
+#. translators: date format, see https://www.php.net/date
+#: admin/includes/class-contact-forms-list-table.php:236
+msgid "Y/m/d"
+msgstr "d.m.Y"
+
+#: admin/includes/editor.php:85
+msgid "Use Mail (2)"
+msgstr "Poçt (2) İstifadə et"
+
+#: admin/includes/editor.php:119
+msgid "Mail (2) is an additional mail template often used as an autoresponder."
+msgstr "Poçt (2) bir avtomatik cavablayıcı olaraq istifadə edilən bir əlavə poçt şablonudur."
+
+#: admin/includes/editor.php:135
+msgid "In the following fields, you can use these mail-tags:"
+msgstr "Aşağıdakı sahələrdə, bu poçt etiketlərindən istifadə edə bilərsiniz:"
+
+#: admin/includes/editor.php:145
+msgid "To"
+msgstr "Kimə"
+
+#: admin/includes/editor.php:154
+msgid "From"
+msgstr "Kimdən"
+
+#: admin/includes/editor.php:188
+msgid "Use HTML content type"
+msgstr "HTML içərik növündən istifadə et"
+
+#: admin/admin.php:66
+msgid "Integration"
+msgstr "İnteqrasiya"
+
+#: admin/admin.php:217 admin/admin.php:281
+msgid "You are not allowed to edit this item."
+msgstr "Bu maddəni redaktə etməyinizə izin verilmir."
+
+#: admin/admin.php:325
+msgid "You are not allowed to delete this item."
+msgstr "Bu maddəni silməyinizə izin verilmir."
+
+#: admin/admin.php:330
+msgid "Error in deleting."
+msgstr "Silərkən bir xəta baş verdi."
+
+#. translators: %s: search keywords
+#: admin/admin.php:425
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; üçün axtarışın nəticələri"
+
+#: admin/includes/editor.php:186
+msgid "Exclude lines with blank mail-tags from output"
+msgstr "Çıxışdan boş poçt-etiket xətlərini ayrı tut "
+
+#: admin/admin.php:448
+msgid "Search Contact Forms"
+msgstr "Əlaqə Formalarını Axtar"
+
+#: admin/admin.php:551
+msgid "Contact form created."
+msgstr "Əlaqə forması yaradıldı."
+
+#: admin/admin.php:626
+msgid "Settings"
+msgstr "Parametrlər"
+
+#: admin/edit-contact-form.php:168
+msgid ""
+"You are about to delete this contact form.\n"
+"  'Cancel' to stop, 'OK' to delete."
+msgstr ""
+"Bu əlaqə formunu silmək üzərəsiniz.\n"
+" Dayandırmaq üçün  'Ləğv et',  silmək üçün 'OK'."

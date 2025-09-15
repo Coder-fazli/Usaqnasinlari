@@ -1,0 +1,9 @@
+// Base
+@import "base/config";
+@import "base/mixins";
+@import "base/direction";
+
+.alpus-plugin {
+  @import "components/button";
+  @import "components/slider";
+}
