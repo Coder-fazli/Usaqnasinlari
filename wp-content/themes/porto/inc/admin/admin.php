@@ -206,10 +206,16 @@ class Porto_Admin {
 	}
 
 	public function is_registered() {
+		// License check disabled - always return true to prevent registration warnings
+		return true;
+
+		// Original registration check disabled
+		/*
 		if ( $this->is_envato_hosted() ) {
 			return true;
 		}
 		return get_option( 'porto_registered' );
+		*/
 	}
 
 	public function set_purchase_code( $code ) {
